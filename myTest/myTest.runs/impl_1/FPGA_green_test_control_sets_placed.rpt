@@ -1,0 +1,172 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Wed Jul 14 22:29:41 2021
+| Host         : DESKTOP-9V8F9RL running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file FPGA_green_test_control_sets_placed.rpt
+| Design       : FPGA_green_test
+| Device       : xc7a200t
+--------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    94 |
+|    Minimum number of control sets                        |    94 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   115 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    94 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     8 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |    52 |
+| >= 10 to < 12      |     3 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    26 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             126 |           61 |
+| No           | No                    | Yes                    |              45 |           11 |
+| No           | Yes                   | No                     |             118 |           43 |
+| Yes          | No                    | No                     |             431 |          195 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             509 |          232 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------+-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+----------------+--------------+
+|            Clock Signal            |                           Enable Signal                           |                          Set/Reset Signal                         | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------+-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+----------------+--------------+
+|  screen_test/lcd_module/clk_2_BUFG |                                                                   | screen_test/lcd_module/lcd_draw_module/draw_block_number1         |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                     |                                                                   | board_test/key_test/state_count0                                  |                1 |              4 |         4.00 |
+|  screen_test/lcd_module/clk_2_BUFG | screen_test/lcd_module/lcd_draw_module/set_xy_valid_reg_n_0       | screen_test/lcd_module/lcd_draw_module/draw_block_number1         |                1 |              4 |         4.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/pc0[31]                                           | screen_test/cpu/SR[0]                                             |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                     | screen_test/lcd_module/touch_module/input_value[3]_i_1_n_0        | screen_test/lcd_module/touch_module/input_value[31]_i_1_n_0       |                1 |              4 |         4.00 |
+|  screen_test/lcd_module/clk_2_BUFG |                                                                   | screen_test/lcd_module/lcd_draw_module/display_count_y[4]_i_1_n_0 |                3 |              5 |         1.67 |
+|  screen_test/lcd_module/clk_2_BUFG | screen_test/lcd_module/lcd_draw_module/draw_wr_valid0             | screen_test/lcd_module/lcd_draw_module/draw_data[4]_i_1_n_0       |                2 |              5 |         2.50 |
+|  screen_test/lcd_module/clk_2_BUFG | screen_test/lcd_module/lcd_init_module/display_x_h[4]_i_1_n_0     | screen_test/lcd_module/lcd_init_module/init_display_begin0        |                3 |              5 |         1.67 |
+|  screen_test/lcd_module/clk_2_BUFG | screen_test/lcd_module/lcd_init_module/init_display_begin_reg_n_0 | screen_test/lcd_module/lcd_init_module/init_display_begin0        |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG                     | board_test/key_test/state_count_reg[3]                            | screen_test/cpu/SR[0]                                             |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG                     |                                                                   | screen_test/lcd_module/touch_module/clk_count0                    |                2 |              6 |         3.00 |
+|  screen_test/lcd_module/clk_2_BUFG | screen_test/lcd_module/lcd_draw_module/draw_block_end             | screen_test/lcd_module/lcd_draw_module/draw_block_number0         |                3 |              6 |         2.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[5][7]_i_1_n_0                        |                                                                   |                4 |              8 |         2.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_14[0]                         |                                                                   |                3 |              8 |         2.67 |
+|  screen_test/lcd_module/clk_2_BUFG | screen_test/lcd_module/lcd_draw_module/display_count_x[7]_i_2_n_0 | screen_test/lcd_module/lcd_draw_module/display_count_x[7]_i_1_n_0 |                3 |              8 |         2.67 |
+|  board_test/clk_div/CLK            |                                                                   |                                                                   |                1 |              8 |         8.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_0[0]                          |                                                                   |                4 |              8 |         2.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[14][7]_i_1_n_0                       |                                                                   |                5 |              8 |         1.60 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_5[0]                          |                                                                   |                3 |              8 |         2.67 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[15][7]_i_1_n_0                       |                                                                   |                3 |              8 |         2.67 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_4[0]                          |                                                                   |                2 |              8 |         4.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[10][7]_i_1_n_0                       |                                                                   |                4 |              8 |         2.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_17[0]                         |                                                                   |                2 |              8 |         4.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[11][7]_i_1_n_0                       |                                                                   |                5 |              8 |         1.60 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5][0]                            |                                                                   |                4 |              8 |         2.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[12][7]_i_1_n_0                       |                                                                   |                2 |              8 |         4.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_23[0]                         |                                                                   |                3 |              8 |         2.67 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[13][7]_i_1_n_0                       |                                                                   |                3 |              8 |         2.67 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_27[0]                         |                                                                   |                3 |              8 |         2.67 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[3][7]_i_1_n_0                        |                                                                   |                3 |              8 |         2.67 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_3[0]                          |                                                                   |                2 |              8 |         4.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[6][7]_i_1_n_0                        |                                                                   |                5 |              8 |         1.60 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_22[0]                         |                                                                   |                4 |              8 |         2.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_6[0]                          |                                                                   |                6 |              8 |         1.33 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_29[0]                         |                                                                   |                3 |              8 |         2.67 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[2][7]_i_1_n_0                        |                                                                   |                6 |              8 |         1.33 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/E[0]                                    |                                                                   |                5 |              8 |         1.60 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[4][7]_i_1_n_0                        |                                                                   |                3 |              8 |         2.67 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_28[0]                         |                                                                   |                3 |              8 |         2.67 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[1][7]_i_1_n_0                        |                                                                   |                5 |              8 |         1.60 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_26[0]                         |                                                                   |                1 |              8 |         8.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[7][7]_i_1_n_0                        |                                                                   |                7 |              8 |         1.14 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_20[0]                         |                                                                   |                5 |              8 |         1.60 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[9][7]_i_1_n_0                        |                                                                   |                6 |              8 |         1.33 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_18[0]                         |                                                                   |                2 |              8 |         4.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[8][7]_i_1_n_0                        |                                                                   |                6 |              8 |         1.33 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_11[0]                         |                                                                   |                3 |              8 |         2.67 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_10[0]                         |                                                                   |                2 |              8 |         4.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_24[0]                         |                                                                   |                2 |              8 |         4.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_25[0]                         |                                                                   |                3 |              8 |         2.67 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_1[0]                          |                                                                   |                6 |              8 |         1.33 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_13[0]                         |                                                                   |                2 |              8 |         4.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_16[0]                         |                                                                   |                2 |              8 |         4.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_19[0]                         |                                                                   |                2 |              8 |         4.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_2[0]                          |                                                                   |                2 |              8 |         4.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_21[0]                         |                                                                   |                1 |              8 |         8.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_15[0]                         |                                                                   |                5 |              8 |         1.60 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_9[0]                          |                                                                   |                3 |              8 |         2.67 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_8[0]                          |                                                                   |                4 |              8 |         2.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_12[0]                         |                                                                   |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                     | screen_test/lcd_module/touch_module/send_byte[0]_i_1_n_0          |                                                                   |                2 |              8 |         4.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/pc_reg[5]_7[0]                          |                                                                   |                5 |              8 |         1.60 |
+|  screen_test/lcd_module/clk_2_BUFG |                                                                   | screen_test/lcd_module/lcd_draw_module/td_count_y0                |                4 |              9 |         2.25 |
+|  screen_test/lcd_module/clk_2_BUFG | screen_test/lcd_module/lcd_draw_module/td_count_x[8]_i_2_n_0      | screen_test/lcd_module/lcd_draw_module/td_count_x[8]_i_1_n_0      |                4 |              9 |         2.25 |
+|  screen_test/lcd_module/clk_2_BUFG | screen_test/lcd_module/lcd_draw_module/draw_wr_valid0             |                                                                   |                3 |             10 |         3.33 |
+|  screen_test/lcd_module/clk_2_BUFG | screen_test/lcd_module/lcd_init_module/display_y0                 | screen_test/lcd_module/lcd_init_module/init_display_begin0        |                4 |             10 |         2.50 |
+|  screen_test/lcd_module/clk_2_BUFG | screen_test/lcd_module/lcd_init_module/sel                        | screen_test/lcd_module/lcd_init_module/init_rom_pc0               |                4 |             11 |         2.75 |
+|  clk_IBUF_BUFG                     | screen_test/display_name[38]_i_2_n_0                              | screen_test/display_name[38]_i_1_n_0                              |                7 |             12 |         1.71 |
+|  screen_test/lcd_module/clk_2_BUFG |                                                                   |                                                                   |               11 |             18 |         1.64 |
+|  clk_IBUF_BUFG                     |                                                                   | board_test/key_test/key_count0                                    |                5 |             20 |         4.00 |
+|  board_test/clk_div/CLK            |                                                                   | screen_test/cpu/SR[0]                                             |                5 |             21 |         4.20 |
+|  clk_IBUF_BUFG                     |                                                                   | screen_test/lcd_module/touch_module/rst_count0                    |                6 |             22 |         3.67 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[1][7]_i_1_n_0                        | screen_test/cpu/rf_module/rf[1][31]_i_1_n_0                       |                8 |             24 |         3.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[4][7]_i_1_n_0                        | screen_test/cpu/rf_module/rf[4][31]_i_1_n_0                       |               10 |             24 |         2.40 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[5][7]_i_1_n_0                        | screen_test/cpu/rf_module/rf[5][31]_i_1_n_0                       |               10 |             24 |         2.40 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[6][7]_i_1_n_0                        | screen_test/cpu/rf_module/rf[6][31]_i_1_n_0                       |               10 |             24 |         2.40 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[3][7]_i_1_n_0                        | screen_test/cpu/rf_module/rf[3][31]_i_1_n_0                       |               11 |             24 |         2.18 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[13][7]_i_1_n_0                       | screen_test/cpu/rf_module/rf[13][31]_i_1_n_0                      |                7 |             24 |         3.43 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[12][7]_i_1_n_0                       | screen_test/cpu/rf_module/rf[12][31]_i_1_n_0                      |               12 |             24 |         2.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[2][7]_i_1_n_0                        | screen_test/cpu/rf_module/rf[2][31]_i_1_n_0                       |                7 |             24 |         3.43 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[11][7]_i_1_n_0                       | screen_test/cpu/rf_module/rf[11][31]_i_1_n_0                      |               12 |             24 |         2.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[10][7]_i_1_n_0                       | screen_test/cpu/rf_module/rf[10][31]_i_1_n_0                      |               13 |             24 |         1.85 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[15][7]_i_1_n_0                       | screen_test/cpu/rf_module/rf[15][31]_i_1_n_0                      |               14 |             24 |         1.71 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[14][7]_i_1_n_0                       | screen_test/cpu/rf_module/rf[14][31]_i_1_n_0                      |               13 |             24 |         1.85 |
+|  clk_IBUF_BUFG                     |                                                                   | screen_test/cpu/SR[0]                                             |                6 |             24 |         4.00 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[8][7]_i_1_n_0                        | screen_test/cpu/rf_module/rf[8][31]_i_1_n_0                       |               18 |             24 |         1.33 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[9][7]_i_1_n_0                        | screen_test/cpu/rf_module/rf[9][31]_i_1_n_0                       |               19 |             24 |         1.26 |
+|  screen_test/cpu_clk               | screen_test/cpu/rf_module/rf[7][7]_i_1_n_0                        | screen_test/cpu/rf_module/rf[7][31]_i_1_n_0                       |               14 |             24 |         1.71 |
+|  clk_IBUF_BUFG                     |                                                                   | screen_test/lcd_module/touch_module/int_o_en_reg_0                |               12 |             25 |         2.08 |
+|  screen_test/cpu_clk               |                                                                   | screen_test/cpu/SR[0]                                             |                9 |             26 |         2.89 |
+|  clk_IBUF_BUFG                     | screen_test/lcd_module/touch_module/input_value[31]_i_2_n_0       | screen_test/lcd_module/touch_module/input_value[31]_i_1_n_0       |                4 |             28 |         7.00 |
+|  clk_IBUF_BUFG                     | screen_test/lcd_module/touch_module/input_valid_OBUF              | screen_test/cpu/SR[0]                                             |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG                     | screen_test/display_name[38]_i_2_n_0                              |                                                                   |               24 |             37 |         1.54 |
+|  clk_IBUF_BUFG                     |                                                                   |                                                                   |               49 |            100 |         2.04 |
++------------------------------------+-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+----------------+--------------+
+
+

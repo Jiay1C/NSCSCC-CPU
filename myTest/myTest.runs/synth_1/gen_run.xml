@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a200tfbg676-1" LaunchTime="1626272902">
+  <File Type="PA-TCL" Name="FPGA_green_test.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="FPGA_green_test_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="FPGA_green_test_reports.tcl"/>
+  <File Type="RDS-RDS" Name="FPGA_green_test.vds"/>
+  <File Type="RDS-UTIL" Name="FPGA_green_test_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="FPGA_green_test_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="FPGA_green_test.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="FPGA_green_test_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="FPGA_green_test_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/lcd_module.dcp">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_test_v1.00/FPGA_gpio_test/FPGA_green_test/rtl/lcd_module.dcp"/>
+        <Attr Name="ImportTime" Val="1487822672"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/Board_test/CLOCK_DIV.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_test_v1.00/FPGA_gpio_test/FPGA_green_test/rtl/Board_test/CLOCK_DIV.v"/>
+        <Attr Name="ImportTime" Val="1487127652"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/Board_test/DOT_TEST.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_test_v1.00/FPGA_gpio_test/FPGA_green_test/rtl/Board_test/DOT_TEST.v"/>
+        <Attr Name="ImportTime" Val="1487127532"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/Board_test/KEY_TEST.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_test_v1.00/FPGA_gpio_test/FPGA_green_test/rtl/Board_test/KEY_TEST.v"/>
+        <Attr Name="ImportTime" Val="1496763076"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/Board_test/NUM_TEST.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_test_v1.00/FPGA_gpio_test/FPGA_green_test/rtl/Board_test/NUM_TEST.v"/>
+        <Attr Name="ImportTime" Val="1487764858"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/Board_test/PRJ_TEST.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_test_v1.00/FPGA_gpio_test/FPGA_green_test/rtl/Board_test/PRJ_TEST.v"/>
+        <Attr Name="ImportTime" Val="1496763122"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/Screen_test/adder.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_test_v1.00/FPGA_gpio_test/FPGA_green_test/rtl/Screen_test/adder.v"/>
+        <Attr Name="ImportTime" Val="1487127942"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/Screen_test/alu.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_test_v1.00/FPGA_gpio_test/FPGA_green_test/rtl/Screen_test/alu.v"/>
+        <Attr Name="ImportTime" Val="1487127942"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/Screen_test/data_ram.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_test_v1.00/FPGA_gpio_test/FPGA_green_test/rtl/Screen_test/data_ram.v"/>
+        <Attr Name="ImportTime" Val="1487127942"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/Screen_test/inst_rom.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_test_v1.00/FPGA_gpio_test/FPGA_green_test/rtl/Screen_test/inst_rom.v"/>
+        <Attr Name="ImportTime" Val="1487127942"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/Screen_test/regfile.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_test_v1.00/FPGA_gpio_test/FPGA_green_test/rtl/Screen_test/regfile.v"/>
+        <Attr Name="ImportTime" Val="1487127942"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/Screen_test/single_cycle_cpu.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_test_v1.00/FPGA_gpio_test/FPGA_green_test/rtl/Screen_test/single_cycle_cpu.v"/>
+        <Attr Name="ImportTime" Val="1487127942"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/Screen_test/single_cycle_cpu_display.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_test_v1.00/FPGA_gpio_test/FPGA_green_test/rtl/Screen_test/single_cycle_cpu_display.v"/>
+        <Attr Name="ImportTime" Val="1487127942"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/FPGA_green_test.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_test_v1.00/FPGA_gpio_test/FPGA_green_test/rtl/FPGA_green_test.v"/>
+        <Attr Name="ImportTime" Val="1487822358"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="FPGA_green_test"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/Constraint.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
