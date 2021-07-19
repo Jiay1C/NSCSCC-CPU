@@ -19,7 +19,7 @@ module IF(
 
     IM im (
     .clka(CLK),    // input wire clka
-    .addra(outPC),  // input wire [15 : 0] addra
+    .addra(outPC>>2),  // input wire [15 : 0] addra
     .douta(Inst)  // output wire [31 : 0] douta
     );
 

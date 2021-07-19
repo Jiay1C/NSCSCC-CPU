@@ -19,7 +19,7 @@ module MEM(
     DM dm (
     .clka(CLK),    // input wire clka
     .wea(MemWrite),      // input wire [0 : 0] wea
-    .addra(ALURes),  // input wire [15 : 0] addra
+    .addra(ALURes>>2),  // input wire [15 : 0] addra
     .dina(MemWData),    // input wire [31 : 0] dina
     .douta(MemRData)  // output wire [31 : 0] douta
     );

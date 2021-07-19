@@ -32,10 +32,10 @@ module ID2(
                 default: ALUOP=12'b000000000000;
             endcase
         end //R
-        6'b100011:begin RegDst=0;ALUSrc=1;PCSrc=0;MemWrite=0;RegWrite=1;MemtoReg=1; end //LW
-        6'b101011:begin RegDst=0;ALUSrc=1;PCSrc=0;MemWrite=1;RegWrite=0;MemtoReg=0; end //SW
-        6'b000100:begin RegDst=0;ALUSrc=0;PCSrc=1;MemWrite=0;RegWrite=0;MemtoReg=0; end //BEQ
-            default: begin RegDst=0;ALUSrc=0;PCSrc=0;MemWrite=0;RegWrite=0;MemtoReg=0; end
+        6'b100011:begin RegDst=0;ALUSrc=1;PCSrc=0;MemWrite=0;RegWrite=1;MemtoReg=1;ALUOP=12'b000000000001; end //LW
+        6'b101011:begin RegDst=0;ALUSrc=1;PCSrc=0;MemWrite=1;RegWrite=0;MemtoReg=0;ALUOP=12'b000000000001; end //SW
+        6'b000100:begin RegDst=0;ALUSrc=0;PCSrc=1;MemWrite=0;RegWrite=0;MemtoReg=0;ALUOP=12'b000000000010; end //BEQ
+            default: begin RegDst=0;ALUSrc=0;PCSrc=0;MemWrite=0;RegWrite=0;MemtoReg=0;ALUOP=12'b000000000000; end
         endcase
     end
 

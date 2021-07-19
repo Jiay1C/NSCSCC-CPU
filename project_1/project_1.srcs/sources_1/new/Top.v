@@ -22,7 +22,7 @@ module Top (
     wire [31:0]Inst_IF_ID;
 
     IF_ID if_id(
-        .CLK(CLK),
+        .CLK(~CLK),
         .RST(RST),
         .inPC(PC_IF),
         .inInst(Inst_IF),
@@ -81,7 +81,7 @@ module Top (
     wire [31:0]PC_ID_EX;
 
     ID_EX id_ex(
-        .CLK(CLK),
+        .CLK(~CLK),
         .RST(RST),
         .inRDataA(RDataA_ID),
         .inRDataB(RDataB_ID),
@@ -147,16 +147,16 @@ module Top (
     wire SF_EX_MEM;
     wire ZF_EX_MEM;
     wire [31:0]MemWData_EX_MEM;
-    wire [31:0]WAddr_EX_MEM;
+    wire [4:0]WAddr_EX_MEM;
     wire RegWrite_EX_MEM;
     wire PCSrc_EX_MEM;
     wire MemWrite_EX_MEM;
     wire MemtoReg_EX_MEM;
 
     EX_MEM ex_mem(
-        .CLK(CLK),
+        .CLK(~CLK),
         .RST(RST),
-        .inPC(outPC_EX),
+        .inPC(PC_EX),
         .inALURes(ALURes_EX),
         .inCF(CF_EX),
         .inOF(OF_EX),
@@ -208,7 +208,7 @@ module Top (
     wire [4:0]WAddr_MEM_WB;
 
     MEM_WB mem_wb(
-        .CLK(CLK),
+        .CLK(~CLK),
         .RST(RST),
         .inMemRData(MemRData_MEM),
         .inALURes(ALURes_EX_MEM),

@@ -13,7 +13,7 @@ module ID_EX(
     input inMemWrite,
     input inMemtoReg,
     input inALUSrc,
-    input inALUOP,
+    input [11:0]inALUOP,
     input inRegDst,
     input [31:0]inPC,
     output reg [31:0]outRDataA,
@@ -26,7 +26,7 @@ module ID_EX(
     output reg outMemWrite,
     output reg outMemtoReg,
     output reg outALUSrc,
-    output reg outALUOP,
+    output reg [11:0]outALUOP,
     output reg outRegDst,
     output reg [31:0]outPC
     );
