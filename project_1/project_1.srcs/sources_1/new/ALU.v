@@ -55,9 +55,9 @@ module ALU(
     assign or_result  = alu_src1 | alu_src2;        //按位或
     assign nor_result = ~or_result;                 //或非
     assign xor_result = alu_src1 ^ alu_src2;        //异或  
-    assign sll_result = alu_src1 << alu_src2;       //逻辑左移
-    assign srl_result = alu_src1 >> alu_src2;       //逻辑右移
-    assign sra_result = $signed(alu_src1) >>> alu_src2;     //算数右移
+    assign sll_result = alu_src2 << alu_src1;       //逻辑左移
+    assign srl_result = alu_src2 >> alu_src1;       //逻辑右移
+    assign sra_result = $signed(alu_src2) >>> alu_src1;     //算数右移
     assign lui_result = {alu_src2[15:0], 16'd0};    //高位加载，第二个操作数的低十六位加载到高十六位上
 
     assign result = ({33{alu_add}}  &  add_result) | ({33{alu_sub}}  &  sub_result) | ({33{alu_slt}}  &  slt_result) | ({33{alu_sltu}} &  sltu_result) | ({33{alu_and}}  &  and_result) | ({33{alu_nor}}  &  nor_result) | ({33{alu_or}}   &  or_result) | ({33{alu_xor}}  &  xor_result) | ({33{alu_sll}}  &  sll_result) | ({33{alu_srl}}  &  srl_result) | ({33{alu_sra}}  &  sra_result) | ({33{alu_lui}}  &  lui_result);

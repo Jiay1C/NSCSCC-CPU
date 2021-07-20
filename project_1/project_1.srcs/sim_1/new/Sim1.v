@@ -47,11 +47,13 @@ module Sim1();
     wire [31:0]imm32_ID;
     wire [4:0]rt_ID;
     wire [4:0]rd_ID;
+    wire [4:0]shamt_ID;
     wire RegWrite_ID;
     wire PCSrc_ID;
     wire MemWrite_ID;
     wire MemtoReg_ID;
-    wire ALUSrc_ID;
+    wire ALUSrc1_ID;
+    wire ALUSrc2_ID;
     wire [11:0]ALUOP_ID;
     wire RegDst_ID;
 
@@ -68,11 +70,13 @@ module Sim1();
         .imm32(imm32_ID),
         .rt(rt_ID),
         .rd(rd_ID),
+        .shamt(shamt_ID),
         .RegWrite(RegWrite_ID),
         .PCSrc(PCSrc_ID),
         .MemWrite(MemWrite_ID),
         .MemtoReg(MemtoReg_ID),
-        .ALUSrc(ALUSrc_ID),
+        .ALUSrc1(ALUSrc1_ID),
+        .ALUSrc2(ALUSrc2_ID),
         .ALUOP(ALUOP_ID),
         .RegDst(RegDst_ID)
     );
@@ -82,11 +86,13 @@ module Sim1();
     wire [31:0]imm32_ID_EX;
     wire [4:0]rt_ID_EX;
     wire [4:0]rd_ID_EX;
+    wire [4:0]shamt_ID_EX;
     wire RegWrite_ID_EX;
     wire PCSrc_ID_EX;
     wire MemWrite_ID_EX;
     wire MemtoReg_ID_EX;
-    wire ALUSrc_ID_EX;
+    wire ALUSrc1_ID_EX;
+    wire ALUSrc2_ID_EX;
     wire [11:0]ALUOP_ID_EX;
     wire RegDst_ID_EX;
     wire [31:0]PC_ID_EX;
@@ -99,11 +105,13 @@ module Sim1();
         .inimm32(imm32_ID),
         .inrt(rt_ID),
         .inrd(rd_ID),
+        .inshamt(shamt_ID),
         .inRegWrite(RegWrite_ID),
         .inPCSrc(PCSrc_ID),
         .inMemWrite(MemWrite_ID),
         .inMemtoReg(MemtoReg_ID),
-        .inALUSrc(ALUSrc_ID),
+        .inALUSrc1(ALUSrc1_ID),
+        .inALUSrc2(ALUSrc2_ID),
         .inALUOP(ALUOP_ID),
         .inRegDst(RegDst_ID),
         .inPC(PC_IF_ID),
@@ -113,11 +121,13 @@ module Sim1();
         .outimm32(imm32_ID_EX),
         .outrt(rt_ID_EX),
         .outrd(rd_ID_EX),
+        .outshamt(shamt_ID_EX),
         .outRegWrite(RegWrite_ID_EX),
         .outPCSrc(PCSrc_ID_EX),
         .outMemWrite(MemWrite_ID_EX),
         .outMemtoReg(MemtoReg_ID_EX),
-        .outALUSrc(ALUSrc_ID_EX),
+        .outALUSrc1(ALUSrc1_ID_EX),
+        .outALUSrc2(ALUSrc2_ID_EX),
         .outALUOP(ALUOP_ID_EX),
         .outRegDst(RegDst_ID_EX),
         .outPC(PC_ID_EX)
@@ -132,7 +142,8 @@ module Sim1();
     wire [31:0]PC_EX;
 
     EX ex(
-        .ALUSrc(ALUSrc_ID_EX),
+        .ALUSrc1(ALUSrc1_ID_EX),
+        .ALUSrc2(ALUSrc2_ID_EX),
         .ALUOP(ALUOP_ID_EX),
         .RegDst(RegDst_ID_EX),
         .inPC(PC_ID_EX),
@@ -141,6 +152,7 @@ module Sim1();
         .imm32(imm32_ID_EX),
         .rt(rt_ID_EX),
         .rd(rd_ID_EX),
+        .shamt(shamt_ID_EX),
 
         .WAddr(WAddr_EX),
         .ALURes(ALURes_EX),

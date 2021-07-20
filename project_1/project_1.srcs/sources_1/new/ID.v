@@ -5,18 +5,20 @@ module ID(
     input RST,
     input inRegWrite,
     input [31:0]Inst,
-    input [31:0]WAddr,
+    input [4:0]WAddr,
     input [31:0]WData,
     output [31:0]RDataA,
     output [31:0]RDataB,
     output [31:0]imm32,
     output [4:0]rt,
     output [4:0]rd,
+    output [4:0]shamt,
     output RegWrite,
     output PCSrc,
     output MemWrite,
     output MemtoReg,
-    output ALUSrc,
+    output ALUSrc1,
+    output ALUSrc2,
     output [11:0]ALUOP,
     output RegDst
     );
@@ -25,7 +27,6 @@ module ID(
     wire [15:0]imm16;
     wire [5:0]opcode;
     wire [5:0]funct;
-    wire [4:0]sa;
     wire [25:0]instr_index;
 
     assign imm32={{16{imm16[15]}},imm16};
@@ -36,7 +37,7 @@ module ID(
         .rs(rs),
         .rt(rt),
         .rd(rd),
-        .sa(sa),
+        .shamt(shamt),
         .funct(funct),
         .imm16(imm16),
         .instr_index(instr_index)
@@ -48,7 +49,8 @@ module ID(
         .RegWrite(RegWrite),
         .PCSrc(PCSrc),
         .MemWrite(MemWrite),
-        .ALUSrc(ALUSrc),
+        .ALUSrc1(ALUSrc1),
+        .ALUSrc2(ALUSrc2),
         .MemtoReg(MemtoReg),
         .ALUOP(ALUOP),
         .RegDst(RegDst)
