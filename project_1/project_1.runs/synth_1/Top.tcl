@@ -71,7 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/.Xil/Vivado-26340-DESKTOP-9V8F9RL/incrSyn}
+set_param synth.incrementalSynthesisCache {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/.Xil/Vivado-16228-DESKTOP-9V8F9RL/incrSyn}
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -91,7 +91,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 add_files {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/IM.coe}}
-add_files {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/DM.coe}}
+add_files {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/DM.coe}}
 read_verilog -library xil_defaultlib {
   {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/ALU.v}
   {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/EX.v}
@@ -109,7 +109,7 @@ read_verilog -library xil_defaultlib {
   {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/WB.v}
   {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/Top.v}
 }
-read_ip -quiet {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/DM/DM.xci}}
+read_ip -quiet {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/DM/DM.xci}}
 set_property used_in_implementation false [get_files -all {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.gen/sources_1/ip/DM/DM_ooc.xdc}}]
 
 read_ip -quiet {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}

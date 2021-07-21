@@ -8,6 +8,7 @@ verilog xil_defaultlib  \
 "../../../../project_1.srcs/sources_1/new/ID.v" \
 "../../../../project_1.srcs/sources_1/new/ID1.v" \
 "../../../../project_1.srcs/sources_1/new/ID2.v" \
+"../../../../project_1.srcs/sources_1/new/IDJump.v" \
 "../../../../project_1.srcs/sources_1/new/ID_EX.v" \
 "../../../../project_1.srcs/sources_1/new/IF.v" \
 "../../../../project_1.srcs/sources_1/new/IF_ID.v" \

@@ -9,7 +9,7 @@ module ID1(
     output [4:0]shamt,
     output [5:0]funct,
     output [15:0]imm16,
-    output [25:0]instr_index
+    output [25:0]JumpTarget
     );
 
     assign opcode=Inst[31:26];
@@ -19,5 +19,5 @@ module ID1(
     assign shamt=Inst[10:6];
     assign funct=Inst[5:0];
     assign imm16=Inst[15:0];
-    assign instr_index=Inst[25:0];
+    assign JumpTarget=Inst[25:0];
 endmodule

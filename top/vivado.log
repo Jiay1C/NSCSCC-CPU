@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Jul 20 13:33:49 2021
+# Process ID: 27084
+# Current directory: C:/Users/Microapple/Desktop/¿Î³Ì/ÁúÐ¾±­/Repository/NSCSCC-CPU/top
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27172 C:\Users\Microapple\Desktop\¿Î³Ì\ÁúÐ¾±­\Repository\NSCSCC-CPU\top\top.xpr
+# Log file: C:/Users/Microapple/Desktop/¿Î³Ì/ÁúÐ¾±­/Repository/NSCSCC-CPU/top/vivado.log
+# Journal file: C:/Users/Microapple/Desktop/¿Î³Ì/ÁúÐ¾±­/Repository/NSCSCC-CPU/top\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Microapple/Desktop/¿Î³Ì/ÁúÐ¾±­/Repository/NSCSCC-CPU/top/top.xpr
+INFO: [Project 1-313] Project file moved from 'D:/vivado/PROJECT/top' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [Project 1-230] Project 'top.xpr' upgraded for this version of Vivado.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+upgrade_project -migrate_output_products
+update_compile_order -fileset sources_1

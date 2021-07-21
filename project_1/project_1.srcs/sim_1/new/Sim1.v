@@ -10,9 +10,9 @@ module Sim1();
     //     .RST(RST)
     // );
 
-    always #20 CLK=~CLK;
+    always #1 CLK=~CLK;
     initial begin
-        CLK=0;RST=1;#101;
+        CLK=0;RST=1;#10;
         RST=0;
     end
 
@@ -22,8 +22,10 @@ module Sim1();
     IF If(
         .CLK(CLK),
         .RST(RST),
-        .PCSrc(PCSrc_MEM),
-        .inPC(PC_EX_MEM),
+        .PCSrc1(PCSrc_MEM),
+        .inPC1(PC_EX_MEM),
+        .PCSrc2(PCSrcForward_ID),
+        .inPC2(PC_ID),
 
         .outPC(PC_IF),
         .Inst(Inst_IF)
@@ -42,6 +44,7 @@ module Sim1();
         .outInst(Inst_IF_ID)
     );
 
+    wire [31:0]PC_ID;
     wire [31:0]RDataA_ID;
     wire [31:0]RDataB_ID;
     wire [31:0]imm32_ID;
@@ -50,6 +53,7 @@ module Sim1();
     wire [4:0]shamt_ID;
     wire RegWrite_ID;
     wire PCSrc_ID;
+    wire PCSrcForward_ID;
     wire MemWrite_ID;
     wire MemtoReg_ID;
     wire ALUSrc1_ID;
@@ -64,7 +68,9 @@ module Sim1();
         .Inst(Inst_IF_ID),
         .WAddr(WAddr_MEM_WB),
         .WData(WData_WB),
+        .inPC(PC_IF_ID),
 
+        .outPC(PC_ID),
         .RDataA(RDataA_ID),
         .RDataB(RDataB_ID),
         .imm32(imm32_ID),
@@ -73,6 +79,7 @@ module Sim1();
         .shamt(shamt_ID),
         .RegWrite(RegWrite_ID),
         .PCSrc(PCSrc_ID),
+        .PCSrcForward(PCSrcForward_ID),
         .MemWrite(MemWrite_ID),
         .MemtoReg(MemtoReg_ID),
         .ALUSrc1(ALUSrc1_ID),
@@ -256,4 +263,7 @@ module Sim1();
         .WData(WData_WB)
     );
 
+
 endmodule
+
+

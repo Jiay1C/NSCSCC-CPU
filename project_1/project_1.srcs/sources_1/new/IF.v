@@ -3,14 +3,22 @@
 module IF(
     input CLK,
     input RST,
-    input PCSrc,
-    input [31:0]inPC,
+    input PCSrc1,
+    input PCSrc2,
+    input [31:0]inPC1,
+    input [31:0]inPC2,
     output [31:0]outPC,
     output [31:0]Inst
     );
     
+    wire [31:0]inPC;
+    wire PCSrc;
+
+    assign inPC=PCSrc1?inPC1:inPC2;
+    assign PCSrc=PCSrc1|PCSrc2;
+
     PC pc (
-    .CLK(CLK),
+    .CLK(~CLK),
     .RST(RST),
     .PCSrc(PCSrc),
     .inPC(inPC),
