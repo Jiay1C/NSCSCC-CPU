@@ -15,6 +15,7 @@ module EX_MEM(
     input inPCSrc,
     input inMemWrite,
     input inMemtoReg,
+    input [5:0]inBranchType,
     output reg [31:0]outPC,
     output reg [31:0]outALURes,
     output reg outCF,
@@ -26,11 +27,12 @@ module EX_MEM(
     output reg outRegWrite,
     output reg outPCSrc,
     output reg outMemWrite,
-    output reg outMemtoReg
+    output reg outMemtoReg,
+    output reg [5:0]outBranchType
     );
 
     always @(posedge CLK) begin
-        if(RST) {outPC,outALURes,outCF,outOF,outSF,outZF,outMemWData,outWAddr,outRegWrite,outPCSrc,outMemWrite,outMemtoReg}<=0;
+        if(RST) {outPC,outALURes,outCF,outOF,outSF,outZF,outMemWData,outWAddr,outRegWrite,outPCSrc,outMemWrite,outMemtoReg,outBranchType}<=0;
         else begin
             outPC<=inPC;
             outALURes<=inALURes;
@@ -44,6 +46,7 @@ module EX_MEM(
             outPCSrc<=inPCSrc;
             outMemWrite<=inMemWrite;
             outMemtoReg<=inMemtoReg;
+            outBranchType<=inBranchType;
         end
     end
 endmodule

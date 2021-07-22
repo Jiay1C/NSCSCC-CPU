@@ -2,10 +2,10 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Wed Jul 21 12:27:22 2021
-# Process ID: 18964
+# Start of session at: Thu Jul 22 10:19:06 2021
+# Process ID: 20220
 # Current directory: C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7532 C:\Users\Microapple\OneDrive - Rain\NSCSCC\project_1\project_1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14816 C:\Users\Microapple\OneDrive - Rain\NSCSCC\project_1\project_1.xpr
 # Log file: C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/vivado.log
 # Journal file: C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1\vivado.jou
 #-----------------------------------------------------------
@@ -13,101 +13,19 @@ start_gui
 open_project {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.xpr}
 update_compile_order -fileset sources_1
 synth_design -rtl -rtl_skip_mlo -name rtl_1
-refresh_design
-close [ open {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/IDJump.v} w ]
-add_files {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/IDJump.v}}
-update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
 refresh_design
-refresh_design
-refresh_design
-refresh_design
-refresh_design
-refresh_design
-refresh_design
-refresh_design
-close_design
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-convert_ips [get_files  {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}]
-export_ip_user_files -of_objects  [get_files  {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -sync -lib_map_path [list {modelsim=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/activehdl}] -force -quiet
-set_property coreContainer.enable 1 [current_project]
-convert_ips [get_files  {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}]
-export_ip_user_files -of_objects  [get_files  {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -sync -lib_map_path [list {modelsim=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/activehdl}] -force -quiet
 set_property -dict [list CONFIG.Coe_File {c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/IM.coe}] [get_ips IM]
-generate_target all [get_files  {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}]
-export_ip_user_files -of_objects [get_files {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -directory {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files} -ipstatic_source_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-launch_simulation
-launch_simulation
+generate_target all [get_files  {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}]
+export_ip_user_files -of_objects [get_files {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -directory {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files} -ipstatic_source_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 launch_simulation
 source Sim1.tcl
 set_property -dict [list CONFIG.Coe_File {c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/IM.coe}] [get_ips IM]
-generate_target all [get_files  {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}]
-export_ip_user_files -of_objects [get_files {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -directory {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files} -ipstatic_source_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-close_sim
-launch_simulation
-source Sim1.tcl
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sim_1/new/simIF.v} w ]
-add_files -fileset sim_1 {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sim_1/new/simIF.v}}
-update_compile_order -fileset sim_1
-set_property top simIF [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-update_compile_order -fileset sim_1
-launch_simulation
-launch_simulation
-launch_simulation
-launch_simulation
-close_sim
-launch_simulation
-source simIF.tcl
-close_sim
-launch_simulation
-source simIF.tcl
-close_sim
-launch_simulation
-source simIF.tcl
-close_sim
-set_property top Sim1 [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-launch_simulation
-source Sim1.tcl
-update_compile_order -fileset sim_1
-close_sim
-launch_simulation
-source Sim1.tcl
-set_property -dict [list CONFIG.Coe_File {c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/IM.coe}] [get_ips IM]
-generate_target all [get_files  {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}]
-export_ip_user_files -of_objects [get_files {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -directory {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files} -ipstatic_source_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-close_sim
-launch_simulation
-source Sim1.tcl
-close_sim
-launch_simulation
-source Sim1.tcl
-close_sim
-launch_simulation
-source Sim1.tcl
-close_sim
-launch_simulation
-source Sim1.tcl
-set_property -name {xsim.simulate.runtime} -value {2000ns} -objects [get_filesets sim_1]
-close_sim
-launch_simulation
-source Sim1.tcl
-set_property -name {xsim.simulate.runtime} -value {1000ns} -objects [get_filesets sim_1]
-close_sim
-launch_simulation
-source Sim1.tcl
-close_sim
-launch_simulation
-source Sim1.tcl
-close_sim
-launch_simulation
-source Sim1.tcl
+generate_target all [get_files  {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}]
+export_ip_user_files -of_objects [get_files {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -directory {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files} -ipstatic_source_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 close_sim
 launch_simulation
 source Sim1.tcl
@@ -115,9 +33,23 @@ close_sim
 launch_simulation
 source Sim1.tcl
 set_property -dict [list CONFIG.Coe_File {c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/IM.coe}] [get_ips IM]
-generate_target all [get_files  {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}]
-export_ip_user_files -of_objects [get_files {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -directory {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files} -ipstatic_source_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+generate_target all [get_files  {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}]
+export_ip_user_files -of_objects [get_files {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -directory {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files} -ipstatic_source_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close_sim
+launch_simulation
+source Sim1.tcl
+close_sim
+launch_simulation
+source Sim1.tcl
+close_sim
+launch_simulation
+source Sim1.tcl
+refresh_design
+set_property -dict [list CONFIG.Coe_File {c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/IM.coe}] [get_ips IM]
+generate_target all [get_files  {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}]
+export_ip_user_files -of_objects [get_files {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -directory {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files} -ipstatic_source_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 close_sim
 launch_simulation
 source Sim1.tcl
@@ -125,12 +57,10 @@ close_sim
 launch_simulation
 source Sim1.tcl
 set_property -dict [list CONFIG.Coe_File {c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/IM.coe}] [get_ips IM]
-generate_target all [get_files  {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}]
-export_ip_user_files -of_objects [get_files {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -directory {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files} -ipstatic_source_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+generate_target all [get_files  {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}]
+export_ip_user_files -of_objects [get_files {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}] -directory {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files} -ipstatic_source_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 close_sim
 launch_simulation
 source Sim1.tcl
-refresh_design
-close_design
 close_sim

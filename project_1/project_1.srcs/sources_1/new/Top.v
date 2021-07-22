@@ -49,6 +49,7 @@ module Top (
     wire ALUSrc2_ID;
     wire [11:0]ALUOP_ID;
     wire RegDst_ID;
+    wire [5:0]BranchType_ID;
 
     ID id(
         .CLK(CLK),
@@ -74,7 +75,8 @@ module Top (
         .ALUSrc1(ALUSrc1_ID),
         .ALUSrc2(ALUSrc2_ID),
         .ALUOP(ALUOP_ID),
-        .RegDst(RegDst_ID)
+        .RegDst(RegDst_ID),
+        .BranchType(BranchType_ID)
     );
 
     wire [31:0]RDataA_ID_EX;
@@ -91,6 +93,7 @@ module Top (
     wire ALUSrc2_ID_EX;
     wire [11:0]ALUOP_ID_EX;
     wire RegDst_ID_EX;
+    wire [5:0]BranchType_ID_EX;
     wire [31:0]PC_ID_EX;
 
     ID_EX id_ex(
@@ -110,6 +113,7 @@ module Top (
         .inALUSrc2(ALUSrc2_ID),
         .inALUOP(ALUOP_ID),
         .inRegDst(RegDst_ID),
+        .inBranchType(BranchType_ID),
         .inPC(PC_IF_ID),
 
         .outRDataA(RDataA_ID_EX),
@@ -126,6 +130,7 @@ module Top (
         .outALUSrc2(ALUSrc2_ID_EX),
         .outALUOP(ALUOP_ID_EX),
         .outRegDst(RegDst_ID_EX),
+        .outBranchType(BranchType_ID_EX),
         .outPC(PC_ID_EX)
     );
 
@@ -171,6 +176,8 @@ module Top (
     wire PCSrc_EX_MEM;
     wire MemWrite_EX_MEM;
     wire MemtoReg_EX_MEM;
+    wire [5:0]BranchType_EX_MEM;
+
 
     EX_MEM ex_mem(
         .CLK(~CLK),
@@ -187,6 +194,7 @@ module Top (
         .inPCSrc(PCSrc_ID_EX),
         .inMemWrite(MemWrite_ID_EX),
         .inMemtoReg(MemtoReg_ID_EX),
+        .inBranchType(BranchType_ID_EX),
 
         .outPC(PC_EX_MEM),
         .outALURes(ALURes_EX_MEM),
@@ -199,7 +207,8 @@ module Top (
         .outRegWrite(RegWrite_EX_MEM),
         .outPCSrc(PCSrc_EX_MEM),
         .outMemWrite(MemWrite_EX_MEM),
-        .outMemtoReg(MemtoReg_EX_MEM)
+        .outMemtoReg(MemtoReg_EX_MEM),
+        .outBranchType(BranchType_EX_MEM)
     );
 
     wire [31:0]MemRData_MEM;
@@ -215,6 +224,7 @@ module Top (
         .MemWData(MemWData_EX_MEM),
         .inPCSrc(PCSrc_EX_MEM),
         .MemWrite(MemWrite_EX_MEM),
+        .BranchType(BranchType_EX_MEM),
 
         .MemRData(MemRData_MEM),
         .outPCSrc(PCSrc_MEM)

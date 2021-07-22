@@ -4,7 +4,6 @@ module ID2(
     input [5:0]opcode,
     input [5:0]funct,
     output reg RegWrite,
-    output reg PCSrc,
     output reg MemWrite,
     output reg MemtoReg,
     output reg ALUSrc1,
@@ -18,7 +17,7 @@ module ID2(
         case (opcode)
         6'b000000: //R
         begin 
-            RegDst=1;ALUSrc2=0;PCSrc=0;MemWrite=0;RegWrite=1;MemtoReg=0;SignExt=0;
+            RegDst=1;ALUSrc2=0;MemWrite=0;RegWrite=1;MemtoReg=0;SignExt=0;
             case (funct)
                 6'b100000:begin ALUOP=12'b000000000001;ALUSrc1=0; end   //add
                 6'b100001:begin ALUOP=12'b000000000001;ALUSrc1=0; end   //addu
@@ -43,20 +42,18 @@ module ID2(
         end
 
         //I
-        6'b001000:begin RegDst=0;ALUSrc1=0;ALUSrc2=1;PCSrc=0;MemWrite=0;RegWrite=1;MemtoReg=0;ALUOP=12'b000000000001;SignExt=0; end //ADDI
-        6'b001001:begin RegDst=0;ALUSrc1=0;ALUSrc2=1;PCSrc=0;MemWrite=0;RegWrite=1;MemtoReg=0;ALUOP=12'b000000000001;SignExt=1; end //ADDIU
-        6'b001010:begin RegDst=0;ALUSrc1=0;ALUSrc2=1;PCSrc=0;MemWrite=0;RegWrite=1;MemtoReg=0;ALUOP=12'b000000000100;SignExt=0; end //SLTI
-        6'b001011:begin RegDst=0;ALUSrc1=0;ALUSrc2=1;PCSrc=0;MemWrite=0;RegWrite=1;MemtoReg=0;ALUOP=12'b000000001000;SignExt=1; end //SLTIU
-        6'b001100:begin RegDst=0;ALUSrc1=0;ALUSrc2=1;PCSrc=0;MemWrite=0;RegWrite=1;MemtoReg=0;ALUOP=12'b000000010000;SignExt=1; end //ANDI
-        6'b001101:begin RegDst=0;ALUSrc1=0;ALUSrc2=1;PCSrc=0;MemWrite=0;RegWrite=1;MemtoReg=0;ALUOP=12'b000001000000;SignExt=1; end //ORI
-        6'b001110:begin RegDst=0;ALUSrc1=0;ALUSrc2=1;PCSrc=0;MemWrite=0;RegWrite=1;MemtoReg=0;ALUOP=12'b000010000000;SignExt=1; end //XORI
-        6'b001111:begin RegDst=0;ALUSrc1=0;ALUSrc2=1;PCSrc=0;MemWrite=0;RegWrite=1;MemtoReg=0;ALUOP=12'b100000000000;SignExt=0; end //LUI
-        6'b100011:begin RegDst=0;ALUSrc1=0;ALUSrc2=1;PCSrc=0;MemWrite=0;RegWrite=1;MemtoReg=1;ALUOP=12'b000000000001;SignExt=0; end //LW
-        6'b101011:begin RegDst=0;ALUSrc1=0;ALUSrc2=1;PCSrc=0;MemWrite=1;RegWrite=0;MemtoReg=0;ALUOP=12'b000000000001;SignExt=0; end //SW
+        6'b001000:begin RegDst=0;ALUSrc1=0;ALUSrc2=1;MemWrite=0;RegWrite=1;MemtoReg=0;ALUOP=12'b000000000001;SignExt=0; end //ADDI
+        6'b001001:begin RegDst=0;ALUSrc1=0;ALUSrc2=1;MemWrite=0;RegWrite=1;MemtoReg=0;ALUOP=12'b000000000001;SignExt=1; end //ADDIU
+        6'b001010:begin RegDst=0;ALUSrc1=0;ALUSrc2=1;MemWrite=0;RegWrite=1;MemtoReg=0;ALUOP=12'b000000000100;SignExt=0; end //SLTI
+        6'b001011:begin RegDst=0;ALUSrc1=0;ALUSrc2=1;MemWrite=0;RegWrite=1;MemtoReg=0;ALUOP=12'b000000001000;SignExt=1; end //SLTIU
+        6'b001100:begin RegDst=0;ALUSrc1=0;ALUSrc2=1;MemWrite=0;RegWrite=1;MemtoReg=0;ALUOP=12'b000000010000;SignExt=1; end //ANDI
+        6'b001101:begin RegDst=0;ALUSrc1=0;ALUSrc2=1;MemWrite=0;RegWrite=1;MemtoReg=0;ALUOP=12'b000001000000;SignExt=1; end //ORI
+        6'b001110:begin RegDst=0;ALUSrc1=0;ALUSrc2=1;MemWrite=0;RegWrite=1;MemtoReg=0;ALUOP=12'b000010000000;SignExt=1; end //XORI
+        6'b001111:begin RegDst=0;ALUSrc1=0;ALUSrc2=1;MemWrite=0;RegWrite=1;MemtoReg=0;ALUOP=12'b100000000000;SignExt=0; end //LUI
+        6'b100011:begin RegDst=0;ALUSrc1=0;ALUSrc2=1;MemWrite=0;RegWrite=1;MemtoReg=1;ALUOP=12'b000000000001;SignExt=0; end //LW
+        6'b101011:begin RegDst=0;ALUSrc1=0;ALUSrc2=1;MemWrite=1;RegWrite=0;MemtoReg=0;ALUOP=12'b000000000001;SignExt=0; end //SW
 
-
-        6'b000100:begin RegDst=0;ALUSrc1=0;ALUSrc2=0;PCSrc=1;MemWrite=0;RegWrite=0;MemtoReg=0;ALUOP=12'b000000000010;SignExt=0; end //BEQ
-            default: begin RegDst=0;ALUSrc1=0;ALUSrc2=0;PCSrc=0;MemWrite=0;RegWrite=0;MemtoReg=0;ALUOP=12'b000000000000;SignExt=0; end
+            default: begin RegDst=0;ALUSrc1=0;ALUSrc2=0;MemWrite=0;RegWrite=0;MemtoReg=0;ALUOP=12'b000000000000;SignExt=0; end
         endcase
     end
 

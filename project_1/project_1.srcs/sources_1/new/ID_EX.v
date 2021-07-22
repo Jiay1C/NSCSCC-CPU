@@ -17,6 +17,7 @@ module ID_EX(
     input inALUSrc2,
     input [11:0]inALUOP,
     input inRegDst,
+    input [5:0]inBranchType,
     input [31:0]inPC,
     output reg [31:0]outRDataA,
     output reg [31:0]outRDataB,
@@ -32,11 +33,12 @@ module ID_EX(
     output reg outALUSrc2,
     output reg [11:0]outALUOP,
     output reg outRegDst,
+    output reg [5:0]outBranchType,
     output reg [31:0]outPC
     );
     
     always @(posedge CLK) begin
-        if(RST) {outRDataA,outRDataB,outimm32,outrt,outrd,outshamt,outRegWrite,outPCSrc,outMemWrite,outMemtoReg,outALUSrc1,outALUSrc2,outALUOP,outRegDst,outPC}<=0;
+        if(RST) {outRDataA,outRDataB,outimm32,outrt,outrd,outshamt,outRegWrite,outPCSrc,outMemWrite,outMemtoReg,outALUSrc1,outALUSrc2,outALUOP,outRegDst,outBranchType,outPC}<=0;
         else begin
             outRDataA<=inRDataA;
             outRDataB<=inRDataB;
@@ -52,6 +54,7 @@ module ID_EX(
             outALUSrc2<=inALUSrc2;
             outALUOP<=inALUOP;
             outRegDst<=inRegDst;
+            outBranchType<=inBranchType;
             outPC<=inPC;
         end
     end
