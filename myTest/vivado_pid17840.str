@@ -1,0 +1,175 @@
+/*
+
+Xilinx Vivado v2021.1 (64-bit) [Major: 2021, Minor: 1]
+SW Build: 3247384 on Thu Jun 10 19:36:33 MDT 2021
+IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+
+Process ID (PID): 17840
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Thu Jul 22 21:18:11 CST 2021
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 24
+
+Screen size: 3840x2160
+Screen resolution (DPI): 150
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=18
+Scale size: 27
+
+Java version: 	11.0.2 64-bit
+Java home: 	C:/Xilinx/Vivado/2021.1/tps/win64/jre11.0.2
+Java executable: 	C:/Xilinx/Vivado/2021.1/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Microapple
+User home directory: C:/Users/Microapple
+User working directory: C:/Users/Microapple/Desktop/¿Î³Ì/ÁúÐ¾±­/Repository/NSCSCC-CPU/myTest
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2021.1
+RDI_DATADIR: C:/Xilinx/Vivado/2021.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2021.1/bin
+
+Vivado preferences file: C:/Users/Microapple/AppData/Roaming/Xilinx/Vivado/2021.1/vivado.xml
+Vivado preferences directory: C:/Users/Microapple/AppData/Roaming/Xilinx/Vivado/2021.1/
+Vivado layouts directory: C:/Users/Microapple/AppData/Roaming/Xilinx/Vivado/2021.1/data/layouts
+PlanAhead jar file: 	C:/Xilinx/Vivado/2021.1/lib/classes/planAhead.jar
+Vivado log file: 	C:/Users/Microapple/Desktop/¿Î³Ì/ÁúÐ¾±­/Repository/NSCSCC-CPU/myTest/vivado.log
+Vivado journal file: 	C:/Users/Microapple/Desktop/¿Î³Ì/ÁúÐ¾±­/Repository/NSCSCC-CPU/myTest/vivado.jou
+Engine tmp dir: 	C:/Users/Microapple/Desktop/¿Î³Ì/ÁúÐ¾±­/Repository/NSCSCC-CPU/myTest/.Xil/Vivado-17840-DESKTOP-9V8F9RL
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINX_HLS: C:/Xilinx/Vitis_HLS/2021.1
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2021.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2021.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2021.1
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,227 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Microapple\Desktop\¿Î³Ì\ÁúÐ¾±­\Repository\NSCSCC-CPU\myTest\myTest.xpr. Version: Vivado v2021.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project C:/Users/Microapple/Desktop/¿Î³Ì/ÁúÐ¾±­/Repository/NSCSCC-CPU/myTest/myTest.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 143 MB (+147770kb) [00:00:05]
+// [Engine Memory]: 1,227 MB (+1135151kb) [00:00:05]
+// [GUI Memory]: 153 MB (+3016kb) [00:00:06]
+// WARNING: HEventQueue.dispatchEvent() is taking  1992 ms.
+// Tcl Message: open_project C:/Users/Microapple/Desktop/¿Î³Ì/ÁúÐ¾±­/Repository/NSCSCC-CPU/myTest/myTest.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/Microapple/OneDrive - Rain/NSCSCC/myTest' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'. 
+// Project name: myTest; location: C:/Users/Microapple/Desktop/¿Î³Ì/ÁúÐ¾±­/Repository/NSCSCC-CPU/myTest; part: xc7a200tfbg676-1
+dismissDialog("Open Project"); // bz
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21, true); // o - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 1,227 MB. GUI used memory: 101 MB. Current time: 7/22/21, 9:18:12 PM CST
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 22, false); // o
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // an
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bz (cs):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// [GUI Memory]: 162 MB (+803kb) [00:00:10]
+// Tcl Message: open_hw_manager 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// [GUI Memory]: 179 MB (+9577kb) [00:00:11]
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+dismissDialog("Open Hardware Manager"); // bz
+// bz (cs):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2021.1   **** Build date : Jun 10 2021 at 20:17:23     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.   
+// HMemoryUtils.trashcanNow. Engine heap size: 1,227 MB. GUI used memory: 118 MB. Current time: 7/22/21, 9:18:45 PM CST
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042 
+// Tcl Message: INFO: [Labtools 27-3417] Launching cs_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:   ******** Xilinx cs_server v2021.1   ****** Build date   : May 27 2021-01:32:33     **** Build number : 2021.1.1622050353       ** Copyright 2017-2021 Xilinx, Inc. All Rights Reserved.    
+// Tcl Message: ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.  Targets(s) ", jsn1" may be locked by another hw_server. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.  Targets(s) ", jsn1" may be locked by another hw_server.  
+// a (cs): Critical Messages: addNotify
+// Elapsed time: 47 seconds
+dismissDialog("Auto Connect"); // bz
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_TARGET_WIZARD, "Open New Target..."); // an
+// Run Command: PAResourceCommand.PACommandNames_OPEN_TARGET_WIZARD
+// aN (cs): Open New Hardware Target: addNotify
+selectButton("NEXT", "Next >"); // JButton
+selectComboBox(PAResourceOtoP.OpenTargetWizard_CONNECT_TO, "Remote server (target is on remote machine)", 1); // e
+setText(PAResourceOtoP.OpenTargetWizard_HOST_NAME, "jsn1"); // l
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// bz (aN):  Open Server : addNotify
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'connect_hw_server' failed due to earlier errors.  
+// aS (aN): Connect Server Critical Messages: addNotify
+selectButton("NEXT", "Next >"); // JButton
+dismissDialog("Open Server"); // bz
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Connect Server Critical Messages"); // aS
+selectButton("CANCEL", "Cancel"); // JButton
+// 'H' command handler elapsed time: 11 seconds
+dismissDialog("Open New Hardware Target"); // aN
+selectButton(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Hardware_auto_connect_target"); // E
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// bz (cs):  Auto Connect : addNotify
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a
+// Tcl Message: INFO: [Common 17-41] Interrupt caught. Command should exit soon. 

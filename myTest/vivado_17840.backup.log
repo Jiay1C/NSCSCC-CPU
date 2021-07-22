@@ -1,0 +1,55 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Jul 22 21:18:02 2021
+# Process ID: 17840
+# Current directory: C:/Users/Microapple/Desktop/¿Î³Ì/ÁúÐ¾±­/Repository/NSCSCC-CPU/myTest
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21508 C:\Users\Microapple\Desktop\¿Î³Ì\ÁúÐ¾±­\Repository\NSCSCC-CPU\myTest\myTest.xpr
+# Log file: C:/Users/Microapple/Desktop/¿Î³Ì/ÁúÐ¾±­/Repository/NSCSCC-CPU/myTest/vivado.log
+# Journal file: C:/Users/Microapple/Desktop/¿Î³Ì/ÁúÐ¾±­/Repository/NSCSCC-CPU/myTest\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Microapple/Desktop/¿Î³Ì/ÁúÐ¾±­/Repository/NSCSCC-CPU/myTest/myTest.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Microapple/OneDrive - Rain/NSCSCC/myTest' since last save.
+WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'C:/Users/Microapple/Desktop/¿Î³Ì/ÁúÐ¾±­/Repository/NSCSCC-CPU/myTest/myTest.gen/sources_1', nor could it be found using path 'C:/Users/Microapple/OneDrive - Rain/NSCSCC/myTest/myTest.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2021.1
+  **** Build date : Jun 10 2021 at 20:17:23
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2021.1
+  ****** Build date   : May 27 2021-01:32:33
+    **** Build number : 2021.1.1622050353
+      ** Copyright 2017-2021 Xilinx, Inc. All Rights Reserved.
+
+
+
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn1" may be locked by another hw_server.
+update_compile_order -fileset sources_1
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:jsn1:3121
+ERROR: [Labtools 27-2223] Unable to connect to hw_server with URL "TCP:jsn1:3121".
+Resolution: 1. Check the host name, port number and network connectivity.
+2. Check to ensure the hw_server is running on the target.
+ERROR: [Common 17-39] 'connect_hw_server' failed due to earlier errors.
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+ERROR: [Labtools 27-3419] Disconnecting from hw_server since it's not responding to requests.  It is recommended to investigate hw_server to find any issues.
