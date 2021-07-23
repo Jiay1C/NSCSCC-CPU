@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Jul 22 22:57:39 2021
+# Process ID: 31372
+# Current directory: C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13672 C:\Users\Microapple\OneDrive - Rain\NSCSCC\project_1\project_1.xpr
+# Log file: C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/vivado.log
+# Journal file: C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.xpr}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/DM/DM.xci}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/DM/DM.xci}}
+file delete -force {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/DM}
+file delete -force {c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.gen/sources_1/ip/DM}
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name DM
+set_property -dict [list CONFIG.Component_Name {DM} CONFIG.Use_Byte_Write_Enable {true} CONFIG.Byte_Size {8} CONFIG.Write_Width_A {32} CONFIG.Write_Depth_A {65536} CONFIG.Read_Width_A {32} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {32} CONFIG.Read_Width_B {32} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/DM.coe}] [get_ips DM]
+generate_target {instantiation_template} [get_files {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/DM/DM.xci}}]
+set_property generate_synth_checkpoint false [get_files  {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/DM/DM.xci}}]
+generate_target all [get_files  {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/DM/DM.xci}}]
+export_ip_user_files -of_objects [get_files {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/DM/DM.xci}}] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/DM/DM.xci}}] -directory {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files} -ipstatic_source_dir {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1

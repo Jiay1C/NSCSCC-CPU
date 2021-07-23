@@ -9,7 +9,7 @@ module MEM(
     input ZF,
     input [31:0]MemWData,
     input inPCSrc,
-    input MemWrite,
+    input [3:0]MemWrite,
     input [5:0]BranchType,
     output [31:0]MemRData,
     output outPCSrc

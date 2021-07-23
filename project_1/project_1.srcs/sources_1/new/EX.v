@@ -2,9 +2,9 @@
 
 module EX(
     input ALUSrc1,
-    input ALUSrc2,
+    input [1:0]ALUSrc2,
     input [11:0]ALUOP,
-    input RegDst,
+    input [1:0]RegDst,
     input [31:0]inPC,
     input [31:0]RDataA,
     input [31:0]RDataB,
@@ -12,7 +12,7 @@ module EX(
     input [4:0]rt,
     input [4:0]rd,
     input [4:0]shamt,
-    output [4:0]WAddr,
+    output reg [4:0]WAddr,
     output [31:0]ALURes,
     output CF,
     output OF,
@@ -21,12 +21,29 @@ module EX(
     output [31:0]outPC
     );
 
-    wire [31:0]alu_src1;
-    wire [31:0]alu_src2;
+    reg [31:0]alu_src1;
+    reg [31:0]alu_src2;
 
-    assign alu_src1=ALUSrc1? shamt:RDataA;
-    assign alu_src2=ALUSrc2? imm32:RDataB;
-    assign WAddr=RegDst? rd:rt;
+    always @(*) begin
+        case (ALUSrc1)
+            1'b1: alu_src1=shamt;
+            1'b0: alu_src1=RDataA;
+            default: alu_src1=32'b0;
+        endcase
+        case (ALUSrc2)
+            2'h2: alu_src2=32'b0;
+            2'h1: alu_src2=imm32;
+            2'h0: alu_src2=RDataB;
+            default: alu_src2=32'b0;
+        endcase
+        case (RegDst)
+            2'h2: WAddr=5'b11111;
+            2'h1: WAddr=rd;
+            2'h0: WAddr=rt;
+            default: WAddr=5'b0;
+        endcase
+    end
+
     assign outPC=inPC+(imm32<<2);
 
     ALU alu(

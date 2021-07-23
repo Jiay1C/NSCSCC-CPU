@@ -21,7 +21,7 @@ Compiling module xil_defaultlib.IF
 Compiling module xil_defaultlib.IF_ID
 Compiling module xil_defaultlib.ID1
 Compiling module xil_defaultlib.ID2
-Compiling module xil_defaultlib.IDJump
+Compiling module xil_defaultlib.RegHILO
 Compiling module xil_defaultlib.RegFile
 Compiling module xil_defaultlib.ID
 Compiling module xil_defaultlib.ID_EX

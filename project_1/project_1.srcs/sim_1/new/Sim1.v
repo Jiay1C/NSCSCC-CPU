@@ -52,20 +52,26 @@ module Sim1();
     wire [4:0]rd_ID;
     wire [4:0]shamt_ID;
     wire RegWrite_ID;
+    wire HIWrite_ID;
+    wire LOWrite_ID;
     wire PCSrc_ID;
     wire PCSrcForward_ID;
-    wire MemWrite_ID;
+    wire [3:0]MemWrite_ID;
     wire MemtoReg_ID;
+    wire ExtratoReg_ID;
     wire ALUSrc1_ID;
-    wire ALUSrc2_ID;
+    wire [1:0]ALUSrc2_ID;
     wire [11:0]ALUOP_ID;
-    wire RegDst_ID;
+    wire [1:0]RegDst_ID;
     wire [5:0]BranchType_ID;
+    wire [31:0]ExtraData_ID;
 
     ID id(
         .CLK(CLK),
         .RST(RST), 
         .inRegWrite(RegWrite_MEM_WB),
+        .inHIWrite(HIWrite_MEM_WB),
+        .inLOWrite(LOWrite_MEM_WB),
         .Inst(Inst_IF_ID),
         .WAddr(WAddr_MEM_WB),
         .WData(WData_WB),
@@ -79,15 +85,19 @@ module Sim1();
         .rd(rd_ID),
         .shamt(shamt_ID),
         .RegWrite(RegWrite_ID),
+        .HIWrite(HIWrite_ID),
+        .LOWrite(LOWrite_ID),
         .PCSrc(PCSrc_ID),
         .PCSrcForward(PCSrcForward_ID),
         .MemWrite(MemWrite_ID),
         .MemtoReg(MemtoReg_ID),
+        .ExtratoReg(ExtratoReg_ID),
         .ALUSrc1(ALUSrc1_ID),
         .ALUSrc2(ALUSrc2_ID),
         .ALUOP(ALUOP_ID),
         .RegDst(RegDst_ID),
-        .BranchType(BranchType_ID)
+        .BranchType(BranchType_ID),
+        .ExtraData(ExtraData_ID)
     );
 
     wire [31:0]RDataA_ID_EX;
@@ -97,14 +107,18 @@ module Sim1();
     wire [4:0]rd_ID_EX;
     wire [4:0]shamt_ID_EX;
     wire RegWrite_ID_EX;
+    wire HIWrite_ID_EX;
+    wire LOWrite_ID_EX;
     wire PCSrc_ID_EX;
-    wire MemWrite_ID_EX;
+    wire [3:0]MemWrite_ID_EX;
     wire MemtoReg_ID_EX;
+    wire ExtratoReg_ID_EX;
     wire ALUSrc1_ID_EX;
-    wire ALUSrc2_ID_EX;
+    wire [1:0]ALUSrc2_ID_EX;
     wire [11:0]ALUOP_ID_EX;
-    wire RegDst_ID_EX;
+    wire [1:0]RegDst_ID_EX;
     wire [5:0]BranchType_ID_EX;
+    wire [31:0]ExtraData_ID_EX;
     wire [31:0]PC_ID_EX;
 
     ID_EX id_ex(
@@ -117,14 +131,18 @@ module Sim1();
         .inrd(rd_ID),
         .inshamt(shamt_ID),
         .inRegWrite(RegWrite_ID),
+        .inHIWrite(HIWrite_ID),
+        .inLOWrite(LOWrite_ID),
         .inPCSrc(PCSrc_ID),
         .inMemWrite(MemWrite_ID),
         .inMemtoReg(MemtoReg_ID),
+        .inExtratoReg(ExtratoReg_ID),
         .inALUSrc1(ALUSrc1_ID),
         .inALUSrc2(ALUSrc2_ID),
         .inALUOP(ALUOP_ID),
         .inRegDst(RegDst_ID),
         .inBranchType(BranchType_ID),
+        .inExtraData(ExtraData_ID),
         .inPC(PC_IF_ID),
 
         .outRDataA(RDataA_ID_EX),
@@ -134,14 +152,18 @@ module Sim1();
         .outrd(rd_ID_EX),
         .outshamt(shamt_ID_EX),
         .outRegWrite(RegWrite_ID_EX),
+        .outHIWrite(HIWrite_ID_EX),
+        .outLOWrite(LOWrite_ID_EX),
         .outPCSrc(PCSrc_ID_EX),
         .outMemWrite(MemWrite_ID_EX),
         .outMemtoReg(MemtoReg_ID_EX),
+        .outExtratoReg(ExtratoReg_ID_EX),
         .outALUSrc1(ALUSrc1_ID_EX),
         .outALUSrc2(ALUSrc2_ID_EX),
         .outALUOP(ALUOP_ID_EX),
         .outRegDst(RegDst_ID_EX),
         .outBranchType(BranchType_ID_EX),
+        .outExtraData(ExtraData_ID_EX),
         .outPC(PC_ID_EX)
     );
 
@@ -184,10 +206,14 @@ module Sim1();
     wire [31:0]MemWData_EX_MEM;
     wire [4:0]WAddr_EX_MEM;
     wire RegWrite_EX_MEM;
+    wire HIWrite_EX_MEM;
+    wire LOWrite_EX_MEM;
     wire PCSrc_EX_MEM;
-    wire MemWrite_EX_MEM;
+    wire [3:0]MemWrite_EX_MEM;
     wire MemtoReg_EX_MEM;
+    wire ExtratoReg_EX_MEM;
     wire [5:0]BranchType_EX_MEM;
+    wire [31:0]ExtraData_EX_MEM;
 
 
     EX_MEM ex_mem(
@@ -202,10 +228,14 @@ module Sim1();
         .inMemWData(RDataB_ID_EX),
         .inWAddr(WAddr_EX),
         .inRegWrite(RegWrite_ID_EX),
+        .inHIWrite(HIWrite_ID_EX),
+        .inLOWrite(LOWrite_ID_EX),
         .inPCSrc(PCSrc_ID_EX),
         .inMemWrite(MemWrite_ID_EX),
         .inMemtoReg(MemtoReg_ID_EX),
+        .inExtratoReg(ExtratoReg_ID_EX),
         .inBranchType(BranchType_ID_EX),
+        .inExtraData(ExtraData_ID_EX),
 
         .outPC(PC_EX_MEM),
         .outALURes(ALURes_EX_MEM),
@@ -216,10 +246,14 @@ module Sim1();
         .outMemWData(MemWData_EX_MEM),
         .outWAddr(WAddr_EX_MEM),
         .outRegWrite(RegWrite_EX_MEM),
+        .outHIWrite(HIWrite_EX_MEM),
+        .outLOWrite(LOWrite_EX_MEM),
         .outPCSrc(PCSrc_EX_MEM),
         .outMemWrite(MemWrite_EX_MEM),
         .outMemtoReg(MemtoReg_EX_MEM),
-        .outBranchType(BranchType_EX_MEM)
+        .outExtratoReg(ExtratoReg_EX_MEM),
+        .outBranchType(BranchType_EX_MEM),
+        .outExtraData(ExtraData_EX_MEM)
     );
 
     wire [31:0]MemRData_MEM;
@@ -244,8 +278,12 @@ module Sim1();
     wire [31:0]MemRData_MEM_WB;
     wire [31:0]ALURes_MEM_WB;
     wire RegWrite_MEM_WB;
+    wire HIWrite_MEM_WB;
+    wire LOWrite_MEM_WB;
     wire MemtoReg_MEM_WB;
+    wire ExtratoReg_MEM_WB;
     wire [4:0]WAddr_MEM_WB;
+    wire [31:0]ExtraData_MEM_WB;
 
     MEM_WB mem_wb(
         .CLK(~CLK),
@@ -253,26 +291,36 @@ module Sim1();
         .inMemRData(MemRData_MEM),
         .inALURes(ALURes_EX_MEM),
         .inRegWrite(RegWrite_EX_MEM),
+        .inHIWrite(HIWrite_EX_MEM),
+        .inLOWrite(LOWrite_EX_MEM),
         .inMemtoReg(MemtoReg_EX_MEM),
+        .inExtratoReg(ExtratoReg_EX_MEM),
         .inWAddr(WAddr_EX_MEM),
+        .inExtraData(ExtraData_EX_MEM),
 
         .outMemRData(MemRData_MEM_WB),
         .outALURes(ALURes_MEM_WB),
         .outRegWrite(RegWrite_MEM_WB),
+        .outHIWrite(HIWrite_MEM_WB),
+        .outLOWrite(LOWrite_MEM_WB),
         .outMemtoReg(MemtoReg_MEM_WB),
-        .outWAddr(WAddr_MEM_WB)
+        .outExtratoReg(ExtratoReg_MEM_WB),
+        .outWAddr(WAddr_MEM_WB),
+        .outExtraData(ExtraData_MEM_WB)
     );
 
     wire [31:0]WData_WB;
 
     WB wb(
         .MemtoReg(MemtoReg_MEM_WB),
+        .ExtratoReg(ExtratoReg_MEM_WB),
+        .ExtraData(ExtraData_MEM_WB),
         .MemRData(MemRData_MEM_WB),
         .ALURes(ALURes_MEM_WB),
 
         .WData(WData_WB)
     );
-
+    
 endmodule
 
 
