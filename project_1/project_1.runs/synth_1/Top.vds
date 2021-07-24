@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Tue Jul 20 16:57:10 2021
-# Process ID: 6432
+# Start of session at: Fri Jul 23 22:57:02 2021
+# Process ID: 24836
 # Current directory: C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.runs/synth_1
 # Command line: vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
 # Log file: C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.runs/synth_1/Top.vds
@@ -17,14 +17,18 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200
 INFO: [Device 21-403] Loading part xc7a200tfbg676-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 4036
-WARNING: [Synth 8-992] PC_EX_MEM is already implicitly declared earlier [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/Top.v:155]
-WARNING: [Synth 8-992] PCSrc_MEM is already implicitly declared earlier [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/Top.v:199]
-WARNING: [Synth 8-992] RegWrite_MEM_WB is already implicitly declared earlier [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/Top.v:218]
-WARNING: [Synth 8-992] WAddr_MEM_WB is already implicitly declared earlier [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/Top.v:220]
-WARNING: [Synth 8-992] WData_WB is already implicitly declared earlier [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/Top.v:238]
+INFO: [Synth 8-7075] Helper process launched with PID 18848
+WARNING: [Synth 8-992] PC_ID is already implicitly declared earlier [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/Top.v:36]
+WARNING: [Synth 8-992] PCSrcForward_ID is already implicitly declared earlier [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/Top.v:47]
+WARNING: [Synth 8-992] PC_EX_MEM is already implicitly declared earlier [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/Top.v:189]
+WARNING: [Synth 8-992] PCSrc_MEM is already implicitly declared earlier [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/Top.v:250]
+WARNING: [Synth 8-992] RegWrite_MEM_WB is already implicitly declared earlier [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/Top.v:272]
+WARNING: [Synth 8-992] HIWrite_MEM_WB is already implicitly declared earlier [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/Top.v:273]
+WARNING: [Synth 8-992] LOWrite_MEM_WB is already implicitly declared earlier [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/Top.v:274]
+WARNING: [Synth 8-992] WAddr_MEM_WB is already implicitly declared earlier [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/Top.v:277]
+WARNING: [Synth 8-992] WData_WB is already implicitly declared earlier [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/Top.v:304]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1139.863 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1141.582 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top' [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/Top.v:3]
 INFO: [Synth 8-6157] synthesizing module 'IF' [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/IF.v:3]
@@ -106,9 +110,9 @@ INFO: [Synth 8-638] synthesizing module 'IM' [c:/Users/Microapple/OneDrive - Rai
 	Parameter C_COUNT_36K_BRAM bound to: 58 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     17.809548 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_4' declared at 'c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.gen/sources_1/ip/DM/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_4' [c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.gen/sources_1/ip/IM/synth/IM.vhd:230]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_4' declared at 'c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/DM/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_4' [c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.gen/sources_1/ip/IM/synth/IM.vhd:230]
 INFO: [Synth 8-256] done synthesizing module 'IM' (12#1) [c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.gen/sources_1/ip/IM/synth/IM.vhd:67]
-WARNING: [Synth 8-689] width (32) of port connection 'addra' does not match port width (16) of module 'IM' [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/IF.v:22]
+WARNING: [Synth 8-689] width (32) of port connection 'addra' does not match port width (16) of module 'IM' [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/IF.v:30]
 INFO: [Synth 8-6155] done synthesizing module 'IF' (13#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/IF.v:3]
 INFO: [Synth 8-6157] synthesizing module 'IF_ID' [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/IF_ID.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'IF_ID' (14#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/IF_ID.v:3]
@@ -116,20 +120,24 @@ INFO: [Synth 8-6157] synthesizing module 'ID' [C:/Users/Microapple/OneDrive - Ra
 INFO: [Synth 8-6157] synthesizing module 'ID1' [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/ID1.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'ID1' (15#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/ID1.v:3]
 INFO: [Synth 8-6157] synthesizing module 'ID2' [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/ID2.v:3]
+WARNING: [Synth 8-151] case item 6'b000010 is unreachable [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/ID2.v:29]
 INFO: [Synth 8-6155] done synthesizing module 'ID2' (16#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/ID2.v:3]
+INFO: [Synth 8-6157] synthesizing module 'RegHILO' [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/RegHILO.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'RegHILO' (17#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/RegHILO.v:3]
 INFO: [Synth 8-6157] synthesizing module 'RegFile' [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/RegFile.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'RegFile' (17#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/RegFile.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'ID' (18#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/ID.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'RegFile' (18#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/RegFile.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ID' (19#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/ID.v:3]
 INFO: [Synth 8-6157] synthesizing module 'ID_EX' [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/ID_EX.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'ID_EX' (19#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/ID_EX.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ID_EX' (20#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/ID_EX.v:3]
 INFO: [Synth 8-6157] synthesizing module 'EX' [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/EX.v:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/EX.v:28]
 INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/ALU.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (20#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/ALU.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'EX' (21#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/EX.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (21#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/ALU.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'EX' (22#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/EX.v:3]
 INFO: [Synth 8-6157] synthesizing module 'EX_MEM' [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/EX_MEM.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'EX_MEM' (22#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/EX_MEM.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'EX_MEM' (23#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/EX_MEM.v:3]
 INFO: [Synth 8-6157] synthesizing module 'MEM' [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/MEM.v:3]
-INFO: [Synth 8-638] synthesizing module 'DM' [c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.gen/sources_1/ip/DM/synth/DM.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'DM' [c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/DM/synth/DM.vhd:69]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -142,7 +150,7 @@ INFO: [Synth 8-638] synthesizing module 'DM' [c:/Users/Microapple/OneDrive - Rai
 	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
 	Parameter C_MEM_TYPE bound to: 0 - type: integer 
-	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 8 - type: integer 
 	Parameter C_ALGORITHM bound to: 1 - type: integer 
 	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
 	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
@@ -156,8 +164,8 @@ INFO: [Synth 8-638] synthesizing module 'DM' [c:/Users/Microapple/OneDrive - Rai
 	Parameter C_INITA_VAL bound to: 0 - type: string 
 	Parameter C_HAS_ENA bound to: 0 - type: integer 
 	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
-	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
-	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 1 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 4 - type: integer 
 	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
 	Parameter C_WRITE_WIDTH_A bound to: 32 - type: integer 
 	Parameter C_READ_WIDTH_A bound to: 32 - type: integer 
@@ -170,8 +178,8 @@ INFO: [Synth 8-638] synthesizing module 'DM' [c:/Users/Microapple/OneDrive - Rai
 	Parameter C_INITB_VAL bound to: 0 - type: string 
 	Parameter C_HAS_ENB bound to: 0 - type: integer 
 	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
-	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
-	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 1 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 4 - type: integer 
 	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter C_WRITE_WIDTH_B bound to: 32 - type: integer 
 	Parameter C_READ_WIDTH_B bound to: 32 - type: integer 
@@ -202,161 +210,55 @@ INFO: [Synth 8-638] synthesizing module 'DM' [c:/Users/Microapple/OneDrive - Rai
 	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
 	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
 	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
-	Parameter C_COUNT_36K_BRAM bound to: 58 - type: string 
+	Parameter C_COUNT_36K_BRAM bound to: 64 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
-	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     19.294452 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_4' declared at 'c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.gen/sources_1/ip/DM/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_4' [c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.gen/sources_1/ip/DM/synth/DM.vhd:234]
-INFO: [Synth 8-256] done synthesizing module 'DM' (23#1) [c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.gen/sources_1/ip/DM/synth/DM.vhd:69]
-WARNING: [Synth 8-689] width (32) of port connection 'addra' does not match port width (16) of module 'DM' [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/MEM.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'MEM' (24#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/MEM.v:3]
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     10.194002 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_4' declared at 'c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/DM/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_4' [c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/DM/synth/DM.vhd:234]
+INFO: [Synth 8-256] done synthesizing module 'DM' (24#1) [c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/DM/synth/DM.vhd:69]
+WARNING: [Synth 8-689] width (32) of port connection 'addra' does not match port width (16) of module 'DM' [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/MEM.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'MEM' (25#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/MEM.v:3]
 INFO: [Synth 8-6157] synthesizing module 'MEM_WB' [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/MEM_WB.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'MEM_WB' (25#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/MEM_WB.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'MEM_WB' (26#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/MEM_WB.v:3]
 INFO: [Synth 8-6157] synthesizing module 'WB' [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/WB.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'WB' (26#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/WB.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'Top' (27#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/Top.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'WB' (27#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/WB.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (28#1) [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/Top.v:3]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1892.312 ; gain = 752.449
+Finished RTL Elaboration : Time (s): cpu = 00:01:03 ; elapsed = 00:01:03 . Memory (MB): peak = 1943.742 ; gain = 802.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1892.312 ; gain = 752.449
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:03 ; elapsed = 00:01:04 . Memory (MB): peak = 1943.742 ; gain = 802.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1892.312 ; gain = 752.449
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:03 ; elapsed = 00:01:04 . Memory (MB): peak = 1943.742 ; gain = 802.160
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.128 . Memory (MB): peak = 1892.312 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 116 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.150 . Memory (MB): peak = 1943.742 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 122 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc]
-WARNING: [Vivado 12-584] No ports matched 'CLK100M'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:2]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:2]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'CLK100M'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:10]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:10]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[7]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:14]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:14]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[6]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:15]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:15]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[5]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:16]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:16]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[4]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:17]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:17]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[3]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:18]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[2]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:19]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:19]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[1]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:20]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:20]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[0]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:21]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:21]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[7]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:22]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:22]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[6]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:23]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:23]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[5]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:24]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:24]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[4]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:25]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[3]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:26]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:26]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[2]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:27]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:27]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[1]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:28]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:28]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[0]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:29]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Seg[7]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:31]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:31]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Seg[6]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:32]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:32]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Seg[5]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:33]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Seg[4]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:34]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Seg[3]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:35]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Seg[2]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:36]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Seg[1]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:37]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Seg[0]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:38]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:38]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Seg[7]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:39]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:39]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Seg[6]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:40]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:40]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Seg[5]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:41]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:41]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Seg[4]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:42]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:42]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Seg[3]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:43]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:43]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Seg[2]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:44]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:44]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Seg[1]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:45]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:45]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Seg[0]'. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:46]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc:46]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1892.312 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1943.742 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.122 . Memory (MB): peak = 1892.312 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.129 . Memory (MB): peak = 1943.742 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:05 ; elapsed = 00:01:06 . Memory (MB): peak = 1892.312 ; gain = 752.449
+Finished Constraint Validation : Time (s): cpu = 00:01:10 ; elapsed = 00:01:11 . Memory (MB): peak = 1943.742 ; gain = 802.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a200tfbg676-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:05 ; elapsed = 00:01:06 . Memory (MB): peak = 1892.312 ; gain = 752.449
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:10 ; elapsed = 00:01:11 . Memory (MB): peak = 1943.742 ; gain = 802.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -364,10 +266,10 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property KEEP_HIERARCHY = SOFT for mem/dm. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for If/im. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:05 ; elapsed = 00:01:06 . Memory (MB): peak = 1892.312 ; gain = 752.449
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:10 ; elapsed = 00:01:11 . Memory (MB): peak = 1943.742 ; gain = 802.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:06 ; elapsed = 00:01:07 . Memory (MB): peak = 1892.312 ; gain = 752.449
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 1943.742 ; gain = 802.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -376,25 +278,38 @@ Detailed RTL Component Info :
 +---Adders : 
 	   3 Input   33 Bit       Adders := 1     
 	   2 Input   33 Bit       Adders := 1     
-	   2 Input   32 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 2     
 +---XORs : 
 	   2 Input     33 Bit         XORs := 1     
 	   4 Input      1 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
-	               32 Bit    Registers := 43    
+	               32 Bit    Registers := 49    
 	               16 Bit    Registers := 1     
 	               12 Bit    Registers := 1     
-	                5 Bit    Registers := 5     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 7     
 	                4 Bit    Registers := 5     
-	                1 Bit    Registers := 17    
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 22    
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 3     
-	  12 Input   12 Bit        Muxes := 1     
-	  15 Input   11 Bit        Muxes := 1     
-	   2 Input    5 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 97    
-	  12 Input    1 Bit        Muxes := 7     
-	  15 Input    1 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 9     
+	  18 Input   32 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 1     
+	  18 Input   12 Bit        Muxes := 1     
+	  23 Input   11 Bit        Muxes := 1     
+	   5 Input    6 Bit        Muxes := 1     
+	  18 Input    6 Bit        Muxes := 1     
+	   4 Input    5 Bit        Muxes := 1     
+	  18 Input    4 Bit        Muxes := 1     
+	  23 Input    3 Bit        Muxes := 1     
+	  18 Input    2 Bit        Muxes := 3     
+	  23 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 129   
+	  23 Input    1 Bit        Muxes := 6     
+	   5 Input    1 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 1     
+	  18 Input    1 Bit        Muxes := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -411,25 +326,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 1892.312 ; gain = 752.449
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:01:15 . Memory (MB): peak = 1943.742 ; gain = 802.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1892.312 ; gain = 752.449
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:17 ; elapsed = 00:01:18 . Memory (MB): peak = 1943.742 ; gain = 802.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1892.312 ; gain = 752.449
+Finished Timing Optimization : Time (s): cpu = 00:01:17 ; elapsed = 00:01:18 . Memory (MB): peak = 1943.742 ; gain = 802.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1892.312 ; gain = 752.449
+Finished Technology Mapping : Time (s): cpu = 00:01:17 ; elapsed = 00:01:18 . Memory (MB): peak = 1943.742 ; gain = 802.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -447,37 +362,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1892.312 ; gain = 752.449
+Finished IO Insertion : Time (s): cpu = 00:01:19 ; elapsed = 00:01:21 . Memory (MB): peak = 1943.742 ; gain = 802.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1892.312 ; gain = 752.449
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:19 ; elapsed = 00:01:21 . Memory (MB): peak = 1943.742 ; gain = 802.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1892.312 ; gain = 752.449
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:19 ; elapsed = 00:01:21 . Memory (MB): peak = 1943.742 ; gain = 802.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1892.312 ; gain = 752.449
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:19 ; elapsed = 00:01:21 . Memory (MB): peak = 1943.742 ; gain = 802.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1892.312 ; gain = 752.449
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:19 ; elapsed = 00:01:21 . Memory (MB): peak = 1943.742 ; gain = 802.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1892.312 ; gain = 752.449
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:19 ; elapsed = 00:01:21 . Memory (MB): peak = 1943.742 ; gain = 802.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -495,25 +410,24 @@ Report Cell Usage:
 +-+-----+------+
 +-+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1892.312 ; gain = 752.449
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:19 ; elapsed = 00:01:21 . Memory (MB): peak = 1943.742 ; gain = 802.160
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:01:10 . Memory (MB): peak = 1892.312 ; gain = 752.449
-Synthesis Optimization Complete : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1892.312 ; gain = 752.449
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:01:17 . Memory (MB): peak = 1943.742 ; gain = 802.160
+Synthesis Optimization Complete : Time (s): cpu = 00:01:19 ; elapsed = 00:01:21 . Memory (MB): peak = 1943.742 ; gain = 802.160
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1892.312 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1943.742 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1892.312 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1943.742 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 Synth Design complete, checksum: a8bcc328
 INFO: [Common 17-83] Releasing license: Synthesis
-51 Infos, 41 Warnings, 34 Critical Warnings and 0 Errors encountered.
+53 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:16 ; elapsed = 00:01:17 . Memory (MB): peak = 1892.312 ; gain = 752.449
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+synth_design: Time (s): cpu = 00:01:22 ; elapsed = 00:01:24 . Memory (MB): peak = 1943.742 ; gain = 802.160
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.runs/synth_1/Top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jul 20 16:58:30 2021...
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 23 22:58:29 2021...

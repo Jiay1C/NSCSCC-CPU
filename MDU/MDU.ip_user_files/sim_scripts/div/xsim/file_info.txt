@@ -1,0 +1,1 @@
+div.vhd,vhdl,xil_defaultlib,../../../../MDU.gen/sources_1/ip/div/sim/div.vhd,

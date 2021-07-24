@@ -22,7 +22,7 @@ module ID(
     output LOWrite,
     output PCSrc,
     output PCSrcForward,
-    output [3:0]MemWrite,
+    output MemWrite,
     output MemtoReg,
     output ExtratoReg,
     output ALUSrc1,
@@ -30,7 +30,9 @@ module ID(
     output [11:0]ALUOP,
     output [1:0]RegDst,
     output [5:0]BranchType,
-    output [31:0]ExtraData
+    output [31:0]ExtraData,
+    output [1:0]MemSize,
+    output MemSignExt
     );
 
     wire [2:0]ExtraDataSrc;
@@ -84,7 +86,9 @@ module ID(
         .SignExt(SignExt),
         .ExtraDataSrc(ExtraDataSrc),
         .outPC(outPC),
-        .BranchType(BranchType)
+        .BranchType(BranchType),
+        .MemSize(MemSize),
+        .MemSignExt(MemSignExt)
     );
 
     RegHILO reghilo(

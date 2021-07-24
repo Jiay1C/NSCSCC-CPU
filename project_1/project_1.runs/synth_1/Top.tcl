@@ -71,7 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/.Xil/Vivado-16228-DESKTOP-9V8F9RL/incrSyn}
+set_param synth.incrementalSynthesisCache {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/.Xil/Vivado-22840-DESKTOP-9V8F9RL/incrSyn}
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -106,11 +106,12 @@ read_verilog -library xil_defaultlib {
   {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/MEM_WB.v}
   {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/PC.v}
   {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/RegFile.v}
+  {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/RegHILO.v}
   {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/WB.v}
   {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/Top.v}
 }
 read_ip -quiet {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/DM/DM.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.gen/sources_1/ip/DM/DM_ooc.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/DM/DM_ooc.xdc}}]
 
 read_ip -quiet {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/ip/IM/IM.xci}}
 set_property used_in_implementation false [get_files -all {{c:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.gen/sources_1/ip/IM/IM_ooc.xdc}}]
@@ -124,9 +125,6 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/constrs_1/new/Constraints.xdc}}]
-
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1

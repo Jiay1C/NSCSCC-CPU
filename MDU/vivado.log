@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Jul 23 22:41:11 2021
+# Process ID: 31184
+# Current directory: C:/Users/Microapple/Desktop/¿Î³Ì/ÁúÐ¾±­/Repository/NSCSCC-CPU/MDU
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21172 C:\Users\Microapple\Desktop\¿Î³Ì\ÁúÐ¾±­\Repository\NSCSCC-CPU\MDU\MDU.xpr
+# Log file: C:/Users/Microapple/Desktop/¿Î³Ì/ÁúÐ¾±­/Repository/NSCSCC-CPU/MDU/vivado.log
+# Journal file: C:/Users/Microapple/Desktop/¿Î³Ì/ÁúÐ¾±­/Repository/NSCSCC-CPU/MDU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Microapple/Desktop/¿Î³Ì/ÁúÐ¾±­/Repository/NSCSCC-CPU/MDU/MDU.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Fxil/Desktop/vivadopro/MDU' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 23 22:53:50 2021...

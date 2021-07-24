@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Tue Jul 20 16:57:10 2021
-# Process ID: 6432
+# Start of session at: Fri Jul 23 22:57:02 2021
+# Process ID: 24836
 # Current directory: C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.runs/synth_1
 # Command line: vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
 # Log file: C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.runs/synth_1/Top.vds
