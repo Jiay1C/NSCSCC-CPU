@@ -61,10 +61,10 @@ module ID2(
                 6'b010001:begin ALUOP<=12'b000000000001;ALUSrc1<=0;ALUSrc2<=2'h2;RegWrite<=0;PCSrcForward<=0;ExtratoReg<=0;RegDst<=2'h1;ExtraDataSrc<=3'b000;HIWrite<=1;LOWrite<=0;HILOWrite<=0;MDUOP<=4'b0000; end    //mthi
                 6'b010011:begin ALUOP<=12'b000000000001;ALUSrc1<=0;ALUSrc2<=2'h2;RegWrite<=0;PCSrcForward<=0;ExtratoReg<=0;RegDst<=2'h1;ExtraDataSrc<=3'b000;HIWrite<=0;LOWrite<=1;HILOWrite<=0;MDUOP<=4'b0000; end    //mtlo
 
-                6'b011010:begin ALUOP<=12'b000000000000;ALUSrc1<=0;ALUSrc2<=2'h0;RegWrite<=0;PCSrcForward<=0;ExtratoReg<=0;RegDst<=2'h0;ExtraDataSrc<=3'b000;HIWrite<=0;LOWrite<=0;HILOWrite<=1;MDUOP<=4'b0100; end    //div
-                6'b011011:begin ALUOP<=12'b000000000000;ALUSrc1<=0;ALUSrc2<=2'h0;RegWrite<=0;PCSrcForward<=0;ExtratoReg<=0;RegDst<=2'h0;ExtraDataSrc<=3'b000;HIWrite<=0;LOWrite<=0;HILOWrite<=1;MDUOP<=4'b1000; end    //divu
-                6'b011000:begin ALUOP<=12'b000000000000;ALUSrc1<=0;ALUSrc2<=2'h0;RegWrite<=0;PCSrcForward<=0;ExtratoReg<=0;RegDst<=2'h0;ExtraDataSrc<=3'b000;HIWrite<=0;LOWrite<=0;HILOWrite<=1;MDUOP<=4'b0001; end    //mult
-                6'b011001:begin ALUOP<=12'b000000000000;ALUSrc1<=0;ALUSrc2<=2'h0;RegWrite<=0;PCSrcForward<=0;ExtratoReg<=0;RegDst<=2'h0;ExtraDataSrc<=3'b000;HIWrite<=0;LOWrite<=0;HILOWrite<=1;MDUOP<=4'b0010; end    //multu
+                6'b011010:begin ALUOP<=12'b000000000001;ALUSrc1<=0;ALUSrc2<=2'h0;RegWrite<=0;PCSrcForward<=0;ExtratoReg<=0;RegDst<=2'h0;ExtraDataSrc<=3'b000;HIWrite<=0;LOWrite<=0;HILOWrite<=1;MDUOP<=4'b0100; end    //div
+                6'b011011:begin ALUOP<=12'b000000000001;ALUSrc1<=0;ALUSrc2<=2'h0;RegWrite<=0;PCSrcForward<=0;ExtratoReg<=0;RegDst<=2'h0;ExtraDataSrc<=3'b000;HIWrite<=0;LOWrite<=0;HILOWrite<=1;MDUOP<=4'b1000; end    //divu
+                6'b011000:begin ALUOP<=12'b000000000001;ALUSrc1<=0;ALUSrc2<=2'h0;RegWrite<=0;PCSrcForward<=0;ExtratoReg<=0;RegDst<=2'h0;ExtraDataSrc<=3'b000;HIWrite<=0;LOWrite<=0;HILOWrite<=1;MDUOP<=4'b0001; end    //mult
+                6'b011001:begin ALUOP<=12'b000000000001;ALUSrc1<=0;ALUSrc2<=2'h0;RegWrite<=0;PCSrcForward<=0;ExtratoReg<=0;RegDst<=2'h0;ExtraDataSrc<=3'b000;HIWrite<=0;LOWrite<=0;HILOWrite<=1;MDUOP<=4'b0010; end    //multu
 
                 default:begin ALUOP<=12'b000000000000;ALUSrc1<=0;ALUSrc2<=2'h0;RegWrite<=0;PCSrcForward<=0;ExtratoReg<=0;RegDst<=2'h0;ExtraDataSrc<=3'b000;HIWrite<=0;LOWrite<=0;HILOWrite<=0;MDUOP<=4'b0000; end
             endcase

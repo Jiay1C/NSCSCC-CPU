@@ -21,7 +21,8 @@ module EX(
     output SF,
     output ZF,
     output [31:0]outPC,
-    output [63:0]HILO
+    output [63:0]HILO,
+    output MDUPause
     );
 
     reg [31:0]alu_src1;
@@ -65,7 +66,7 @@ module EX(
         .mdu_op(MDUOP),
         .rsc1(alu_src1),
         .rsc2(alu_src2),
-        .pc_ena(),//之后再加
+        .mdu_pause(MDUPause),
         .HILO(HILO)
     );
 endmodule

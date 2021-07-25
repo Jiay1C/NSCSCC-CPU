@@ -16,11 +16,35 @@ module Sim1();
         RST=0;
     end
     
+    wire CLK_IF;
+    wire CLK_IF_ID;
+    wire CLK_ID;
+    wire CLK_ID_EX;
+    wire CLK_EX;
+    wire CLK_EX_MEM;
+    wire CLK_MEM;
+    wire CLK_MEM_WB;
+    wire CLK_WB;
+
+    CU cu(
+        .CLK(CLK),
+        .MDUPause(MDUPause_EX),
+        .CLK_IF(CLK_IF),
+        .CLK_IF_ID(CLK_IF_ID),
+        .CLK_ID(CLK_ID),
+        .CLK_ID_EX(CLK_ID_EX),
+        .CLK_EX(CLK_EX),
+        .CLK_EX_MEM(CLK_EX_MEM),
+        .CLK_MEM(CLK_MEM),
+        .CLK_MEM_WB(CLK_MEM_WB),
+        .CLK_WB(CLK_WB)
+    );
+    
     wire [31:0]PC_IF;
     wire [31:0]Inst_IF;
 
     IF If(
-        .CLK(CLK),
+        .CLK(CLK_IF),
         .RST(RST),
         .PCSrc1(PCSrc_MEM),
         .inPC1(PC_EX_MEM),
@@ -35,7 +59,7 @@ module Sim1();
     wire [31:0]Inst_IF_ID;
 
     IF_ID if_id(
-        .CLK(~CLK),
+        .CLK(~CLK_IF_ID),
         .RST(RST),
         .inPC(PC_IF),
         .inInst(Inst_IF),
@@ -71,7 +95,7 @@ module Sim1();
     wire MemSignExt_ID;
 
     ID id(
-        .CLK(CLK),
+        .CLK(CLK_ID),
         .RST(RST), 
         .inRegWrite(RegWrite_MEM_WB),
         .inHIWrite(HIWrite_MEM_WB),
@@ -136,7 +160,7 @@ module Sim1();
     wire [31:0]PC_ID_EX;
 
     ID_EX id_ex(
-        .CLK(~CLK),
+        .CLK(~CLK_ID_EX),
         .RST(RST),
         .inRDataA(RDataA_ID),
         .inRDataB(RDataB_ID),
@@ -197,9 +221,10 @@ module Sim1();
     wire ZF_EX;
     wire [31:0]PC_EX;
     wire [63:0]HILO_EX;
+    wire MDUPause_EX;
 
     EX ex(
-        .CLK(CLK),
+        .CLK(CLK_EX),
         .ALUSrc1(ALUSrc1_ID_EX),
         .ALUSrc2(ALUSrc2_ID_EX),
         .ALUOP(ALUOP_ID_EX),
@@ -220,7 +245,8 @@ module Sim1();
         .SF(SF_EX),
         .ZF(ZF_EX),
         .outPC(PC_EX),
-        .HILO(HILO_EX)
+        .HILO(HILO_EX),
+        .MDUPause(MDUPause_EX)
     );
 
     wire [31:0]PC_EX_MEM;
@@ -247,7 +273,7 @@ module Sim1();
 
 
     EX_MEM ex_mem(
-        .CLK(~CLK),
+        .CLK(~CLK_EX_MEM),
         .RST(RST),
         .inPC(PC_EX),
         .inALURes(ALURes_EX),
@@ -299,7 +325,7 @@ module Sim1();
     wire PCSrc_MEM;
 
     MEM mem(
-        .CLK(CLK),
+        .CLK(CLK_MEM),
         .ALURes(ALURes_EX_MEM),
         .CF(CF_EX_MEM),
         .OF(OF_EX_MEM),
@@ -331,7 +357,7 @@ module Sim1();
     wire [63:0]HILO_MEM_WB;
 
     MEM_WB mem_wb(
-        .CLK(~CLK),
+        .CLK(~CLK_MEM_WB),
         .RST(RST),
         .inMemRData(MemRData_MEM),
         .inALURes(ALURes_EX_MEM),
@@ -370,4 +396,6 @@ module Sim1();
         .WData(WData_WB)
     );
 endmodule
+
+
 
