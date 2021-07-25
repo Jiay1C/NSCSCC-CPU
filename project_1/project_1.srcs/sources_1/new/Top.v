@@ -43,6 +43,7 @@ module Top (
     wire RegWrite_ID;
     wire HIWrite_ID;
     wire LOWrite_ID;
+    wire HILOWrite_ID;
     wire PCSrc_ID;
     wire PCSrcForward_ID;
     wire MemWrite_ID;
@@ -51,6 +52,7 @@ module Top (
     wire ALUSrc1_ID;
     wire [1:0]ALUSrc2_ID;
     wire [11:0]ALUOP_ID;
+    wire [3:0]MDUOP_ID;
     wire [1:0]RegDst_ID;
     wire [5:0]BranchType_ID;
     wire [31:0]ExtraData_ID;
@@ -63,9 +65,11 @@ module Top (
         .inRegWrite(RegWrite_MEM_WB),
         .inHIWrite(HIWrite_MEM_WB),
         .inLOWrite(LOWrite_MEM_WB),
+        .inHILOWrite(HILOWrite_MEM_WB),
         .Inst(Inst_IF_ID),
         .WAddr(WAddr_MEM_WB),
         .WData(WData_WB),
+        .HILO(HILO_MEM_WB),
         .inPC(PC_IF_ID),
 
         .outPC(PC_ID),
@@ -78,6 +82,7 @@ module Top (
         .RegWrite(RegWrite_ID),
         .HIWrite(HIWrite_ID),
         .LOWrite(LOWrite_ID),
+        .HILOWrite(HILOWrite_ID),
         .PCSrc(PCSrc_ID),
         .PCSrcForward(PCSrcForward_ID),
         .MemWrite(MemWrite_ID),
@@ -86,6 +91,7 @@ module Top (
         .ALUSrc1(ALUSrc1_ID),
         .ALUSrc2(ALUSrc2_ID),
         .ALUOP(ALUOP_ID),
+        .MDUOP(MDUOP_ID),
         .RegDst(RegDst_ID),
         .BranchType(BranchType_ID),
         .ExtraData(ExtraData_ID),
@@ -102,6 +108,7 @@ module Top (
     wire RegWrite_ID_EX;
     wire HIWrite_ID_EX;
     wire LOWrite_ID_EX;
+    wire HILOWrite_ID_EX;
     wire PCSrc_ID_EX;
     wire MemWrite_ID_EX;
     wire MemtoReg_ID_EX;
@@ -109,6 +116,7 @@ module Top (
     wire ALUSrc1_ID_EX;
     wire [1:0]ALUSrc2_ID_EX;
     wire [11:0]ALUOP_ID_EX;
+    wire [3:0]MDUOP_ID_EX;
     wire [1:0]RegDst_ID_EX;
     wire [5:0]BranchType_ID_EX;
     wire [31:0]ExtraData_ID_EX;
@@ -128,6 +136,7 @@ module Top (
         .inRegWrite(RegWrite_ID),
         .inHIWrite(HIWrite_ID),
         .inLOWrite(LOWrite_ID),
+        .inHILOWrite(HILOWrite_ID),
         .inPCSrc(PCSrc_ID),
         .inMemWrite(MemWrite_ID),
         .inMemtoReg(MemtoReg_ID),
@@ -135,6 +144,7 @@ module Top (
         .inALUSrc1(ALUSrc1_ID),
         .inALUSrc2(ALUSrc2_ID),
         .inALUOP(ALUOP_ID),
+        .inMDUOP(MDUOP_ID),
         .inRegDst(RegDst_ID),
         .inBranchType(BranchType_ID),
         .inExtraData(ExtraData_ID),
@@ -151,6 +161,7 @@ module Top (
         .outRegWrite(RegWrite_ID_EX),
         .outHIWrite(HIWrite_ID_EX),
         .outLOWrite(LOWrite_ID_EX),
+        .outHILOWrite(HILOWrite_ID_EX),
         .outPCSrc(PCSrc_ID_EX),
         .outMemWrite(MemWrite_ID_EX),
         .outMemtoReg(MemtoReg_ID_EX),
@@ -158,6 +169,7 @@ module Top (
         .outALUSrc1(ALUSrc1_ID_EX),
         .outALUSrc2(ALUSrc2_ID_EX),
         .outALUOP(ALUOP_ID_EX),
+        .outMDUOP(MDUOP_ID_EX),
         .outRegDst(RegDst_ID_EX),
         .outBranchType(BranchType_ID_EX),
         .outExtraData(ExtraData_ID_EX),
@@ -173,11 +185,14 @@ module Top (
     wire SF_EX;
     wire ZF_EX;
     wire [31:0]PC_EX;
+    wire [63:0]HILO_EX;
 
     EX ex(
+        .CLK(CLK),
         .ALUSrc1(ALUSrc1_ID_EX),
         .ALUSrc2(ALUSrc2_ID_EX),
         .ALUOP(ALUOP_ID_EX),
+        .MDUOP(MDUOP_ID_EX),
         .RegDst(RegDst_ID_EX),
         .inPC(PC_ID_EX),
         .RDataA(RDataA_ID_EX),
@@ -193,7 +208,8 @@ module Top (
         .OF(OF_EX),
         .SF(SF_EX),
         .ZF(ZF_EX),
-        .outPC(PC_EX)
+        .outPC(PC_EX),
+        .HILO(HILO_EX)
     );
 
     wire [31:0]PC_EX_MEM;
@@ -207,6 +223,7 @@ module Top (
     wire RegWrite_EX_MEM;
     wire HIWrite_EX_MEM;
     wire LOWrite_EX_MEM;
+    wire HILOWrite_EX_MEM;
     wire PCSrc_EX_MEM;
     wire MemWrite_EX_MEM;
     wire MemtoReg_EX_MEM;
@@ -215,6 +232,7 @@ module Top (
     wire [31:0]ExtraData_EX_MEM;
     wire [1:0]MemSize_EX_MEM;
     wire MemSignExt_EX_MEM;
+    wire [63:0]HILO_EX_MEM;
 
 
     EX_MEM ex_mem(
@@ -231,6 +249,7 @@ module Top (
         .inRegWrite(RegWrite_ID_EX),
         .inHIWrite(HIWrite_ID_EX),
         .inLOWrite(LOWrite_ID_EX),
+        .inHILOWrite(HILOWrite_ID_EX),
         .inPCSrc(PCSrc_ID_EX),
         .inMemWrite(MemWrite_ID_EX),
         .inMemtoReg(MemtoReg_ID_EX),
@@ -239,6 +258,7 @@ module Top (
         .inExtraData(ExtraData_ID_EX),
         .inMemSize(MemSize_ID_EX),
         .inMemSignExt(MemSignExt_ID_EX),
+        .inHILO(HILO_EX),
 
         .outPC(PC_EX_MEM),
         .outALURes(ALURes_EX_MEM),
@@ -251,6 +271,7 @@ module Top (
         .outRegWrite(RegWrite_EX_MEM),
         .outHIWrite(HIWrite_EX_MEM),
         .outLOWrite(LOWrite_EX_MEM),
+        .outHILOWrite(HILOWrite_EX_MEM),
         .outPCSrc(PCSrc_EX_MEM),
         .outMemWrite(MemWrite_EX_MEM),
         .outMemtoReg(MemtoReg_EX_MEM),
@@ -258,7 +279,8 @@ module Top (
         .outBranchType(BranchType_EX_MEM),
         .outExtraData(ExtraData_EX_MEM),
         .outMemSize(MemSize_EX_MEM),
-        .outMemSignExt(MemSignExt_EX_MEM)
+        .outMemSignExt(MemSignExt_EX_MEM),
+        .outHILO(HILO_EX_MEM)
     );
 
     wire RegWrite_MEM;
@@ -290,10 +312,12 @@ module Top (
     wire RegWrite_MEM_WB;
     wire HIWrite_MEM_WB;
     wire LOWrite_MEM_WB;
+    wire HILOWrite_MEM_WB;
     wire MemtoReg_MEM_WB;
     wire ExtratoReg_MEM_WB;
     wire [4:0]WAddr_MEM_WB;
     wire [31:0]ExtraData_MEM_WB;
+    wire [63:0]HILO_MEM_WB;
 
     MEM_WB mem_wb(
         .CLK(~CLK),
@@ -303,20 +327,24 @@ module Top (
         .inRegWrite(RegWrite_MEM),
         .inHIWrite(HIWrite_EX_MEM),
         .inLOWrite(LOWrite_EX_MEM),
+        .inHILOWrite(HILOWrite_EX_MEM),
         .inMemtoReg(MemtoReg_EX_MEM),
         .inExtratoReg(ExtratoReg_EX_MEM),
         .inWAddr(WAddr_EX_MEM),
         .inExtraData(ExtraData_EX_MEM),
+        .inHILO(HILO_EX_MEM),
 
         .outMemRData(MemRData_MEM_WB),
         .outALURes(ALURes_MEM_WB),
         .outRegWrite(RegWrite_MEM_WB),
         .outHIWrite(HIWrite_MEM_WB),
         .outLOWrite(LOWrite_MEM_WB),
+        .outHILOWrite(HILOWrite_MEM_WB),
         .outMemtoReg(MemtoReg_MEM_WB),
         .outExtratoReg(ExtratoReg_MEM_WB),
         .outWAddr(WAddr_MEM_WB),
-        .outExtraData(ExtraData_MEM_WB)
+        .outExtraData(ExtraData_MEM_WB),
+        .outHILO(HILO_MEM_WB)
     );
 
     wire [31:0]WData_WB;

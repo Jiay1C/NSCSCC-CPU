@@ -12,6 +12,7 @@ module ID_EX(
     input inRegWrite,
     input inHIWrite,
     input inLOWrite,
+    input inHILOWrite,
     input inPCSrc,
     input inMemWrite,
     input inMemtoReg,
@@ -19,6 +20,7 @@ module ID_EX(
     input inALUSrc1,
     input [1:0]inALUSrc2,
     input [11:0]inALUOP,
+    input [3:0]inMDUOP,
     input [1:0]inRegDst,
     input [5:0]inBranchType,
     input [31:0]inExtraData,
@@ -34,6 +36,7 @@ module ID_EX(
     output reg outRegWrite,
     output reg outHIWrite,
     output reg outLOWrite,
+    output reg outHILOWrite,
     output reg outPCSrc,
     output reg outMemWrite,
     output reg outMemtoReg,
@@ -41,6 +44,7 @@ module ID_EX(
     output reg outALUSrc1,
     output reg [1:0]outALUSrc2,
     output reg [11:0]outALUOP,
+    output reg [3:0]outMDUOP,
     output reg [1:0]outRegDst,
     output reg [5:0]outBranchType,
     output reg [31:0]outExtraData,
@@ -50,7 +54,7 @@ module ID_EX(
     );
     
     always @(posedge CLK) begin
-        if(RST) {outRDataA,outRDataB,outimm32,outrt,outrd,outshamt,outRegWrite,outHIWrite,outLOWrite,outPCSrc,outMemWrite,outMemtoReg,outExtratoReg,outALUSrc1,outALUSrc2,outALUOP,outRegDst,outBranchType,outExtraData,outMemSize,outMemSignExt,outPC}<=0;
+        if(RST) {outRDataA,outRDataB,outimm32,outrt,outrd,outshamt,outRegWrite,outHIWrite,outLOWrite,outHILOWrite,outPCSrc,outMemWrite,outMemtoReg,outExtratoReg,outALUSrc1,outALUSrc2,outALUOP,outMDUOP,outRegDst,outBranchType,outExtraData,outMemSize,outMemSignExt,outPC}<=0;
         else begin
             outRDataA<=inRDataA;
             outRDataB<=inRDataB;
@@ -61,6 +65,7 @@ module ID_EX(
             outRegWrite<=inRegWrite;
             outHIWrite<=inHIWrite;
             outLOWrite<=inLOWrite;
+            outHILOWrite<=inHILOWrite;
             outPCSrc<=inPCSrc;
             outMemWrite<=inMemWrite;
             outMemtoReg<=inMemtoReg;
@@ -68,6 +73,7 @@ module ID_EX(
             outALUSrc1<=inALUSrc1;
             outALUSrc2<=inALUSrc2;
             outALUOP<=inALUOP;
+            outMDUOP<=inMDUOP;
             outRegDst<=inRegDst;
             outBranchType<=inBranchType;
             outExtraData<=inExtraData;

@@ -1,9 +1,11 @@
 `timescale 1ns / 1ps
 
 module EX(
+    input CLK,
     input ALUSrc1,
     input [1:0]ALUSrc2,
     input [11:0]ALUOP,
+    input [3:0]MDUOP,
     input [1:0]RegDst,
     input [31:0]inPC,
     input [31:0]RDataA,
@@ -18,7 +20,8 @@ module EX(
     output OF,
     output SF,
     output ZF,
-    output [31:0]outPC
+    output [31:0]outPC,
+    output [63:0]HILO
     );
 
     reg [31:0]alu_src1;
@@ -57,4 +60,12 @@ module EX(
         .alu_OF(OF)
     );
 
+    MDU mdu(
+        .clk(CLK),
+        .mdu_op(MDUOP),
+        .rsc1(alu_src1),
+        .rsc2(alu_src2),
+        .pc_ena(),//之后再加
+        .HILO(HILO)
+    );
 endmodule
