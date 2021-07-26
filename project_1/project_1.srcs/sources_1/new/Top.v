@@ -214,6 +214,7 @@ module Top (
 
     EX ex(
         .CLK(CLK_EX),
+        .RST(RST),
         .ALUSrc1(ALUSrc1_ID_EX),
         .ALUSrc2(ALUSrc2_ID_EX),
         .ALUOP(ALUOP_ID_EX),

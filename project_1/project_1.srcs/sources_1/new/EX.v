@@ -2,6 +2,7 @@
 
 module EX(
     input CLK,
+    input RST,
     input ALUSrc1,
     input [1:0]ALUSrc2,
     input [11:0]ALUOP,
@@ -63,6 +64,7 @@ module EX(
 
     MDU mdu(
         .clk(CLK),
+        .rst(RST),
         .mdu_op(MDUOP),
         .rsc1(alu_src1),
         .rsc2(alu_src2),

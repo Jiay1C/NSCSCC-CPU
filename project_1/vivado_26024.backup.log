@@ -1,0 +1,216 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Sun Jul 25 22:00:32 2021
+# Process ID: 26024
+# Current directory: C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14552 C:\Users\Microapple\OneDrive - Rain\NSCSCC\project_1\project_1.xpr
+# Log file: C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/vivado.log
+# Journal file: C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'simMDU'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2021.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'simMDU' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.sim/sim_1/behav/xsim/DM.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.sim/sim_1/behav/xsim/DM.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.sim/sim_1/behav/xsim/IM.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.sim/sim_1/behav/xsim/IM.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj simMDU_vlog.prj"
+"xvhdl --incr --relax -prj simMDU_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto dab95d2888f043f1ae31caa2f70fdc71 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_17 -L floating_point_v7_0_19 -L xbip_dsp48_mult_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L div_gen_v5_1_18 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot simMDU_behav xil_defaultlib.simMDU xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto dab95d2888f043f1ae31caa2f70fdc71 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_17 -L floating_point_v7_0_19 -L xbip_dsp48_mult_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L div_gen_v5_1_18 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot simMDU_behav xil_defaultlib.simMDU xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simMDU_behav -key {Behavioral:sim_1:Functional:simMDU} -tclbatch {simMDU.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source simMDU.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 1000ns
+FATAL_ERROR: Iteration limit 10000 is reached. Possible zero delay oscillation detected where simulation time can not advance. Please check your source code. Note that the iteration limit can be changed using switch -maxdeltaid.
+Time: 650 ns  Iteration: 10000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simMDU_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1487.480 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'simMDU'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2021.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'simMDU' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.sim/sim_1/behav/xsim/DM.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.sim/sim_1/behav/xsim/DM.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.sim/sim_1/behav/xsim/IM.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.sim/sim_1/behav/xsim/IM.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj simMDU_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/imports/new/MDU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MDU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sim_1/new/simMDU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simMDU
+"xvhdl --incr --relax -prj simMDU_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto dab95d2888f043f1ae31caa2f70fdc71 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_17 -L floating_point_v7_0_19 -L xbip_dsp48_mult_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L div_gen_v5_1_18 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot simMDU_behav xil_defaultlib.simMDU xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto dab95d2888f043f1ae31caa2f70fdc71 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_17 -L floating_point_v7_0_19 -L xbip_dsp48_mult_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L div_gen_v5_1_18 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot simMDU_behav xil_defaultlib.simMDU xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package div_gen_v5_1_18.div_gen_v5_1_18_viv_comp
+Compiling package xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv_comp
+Compiling package axi_utils_v2_0_6.axi_utils_v2_0_6_pkg
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_6.global_util_pkg
+Compiling package axi_utils_v2_0_6.axi_utils_comps
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package xbip_bram18k_v3_0_6.xbip_bram18k_v3_0_6_pkg
+Compiling package div_gen_v5_1_18.div_gen_pkg
+Compiling package ieee.std_logic_signed
+Compiling package unisim.vcomponents
+Compiling package div_gen_v5_1_18.pkg_addsub
+Compiling architecture synth of entity div_gen_v5_1_18.c_twos_comp_viv [\c_twos_comp_viv(c_width=32,c_ai...]
+Compiling architecture virtex of entity div_gen_v5_1_18.cmp2s_v [\cmp2s_v(c_bus_width=32,c_regist...]
+Compiling architecture synth of entity div_gen_v5_1_18.c_twos_comp_viv [\c_twos_comp_viv(c_width=32,c_ai...]
+Compiling architecture virtex of entity div_gen_v5_1_18.cmp2s_v [\cmp2s_v(c_bus_width=32,c_ainit_...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture rtl of entity div_gen_v5_1_18.c_addsub_lut6 [\c_addsub_lut6(c_width=33,c_add_...]
+Compiling architecture synth of entity div_gen_v5_1_18.c_addsub_viv [\c_addsub_viv(c_a_width=33,c_b_w...]
+Compiling architecture virtex of entity div_gen_v5_1_18.addsubreg_v [\addsubreg_v(c_bus_width=33,c_ha...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity div_gen_v5_1_18.c_addsub_lut6 [\c_addsub_lut6(c_width=33,c_add_...]
+Compiling architecture synth of entity div_gen_v5_1_18.c_addsub_viv [\c_addsub_viv(c_a_width=33,c_b_w...]
+Compiling architecture virtex of entity div_gen_v5_1_18.addsubreg_v [\addsubreg_v(c_bus_width=33,c_ha...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture virtex of entity div_gen_v5_1_18.dividervdc_v [\dividervdc_v(bus_num=32,bus_div...]
+Compiling architecture synth of entity div_gen_v5_1_18.c_twos_comp_viv [\c_twos_comp_viv(c_width=33,c_ai...]
+Compiling architecture virtex of entity div_gen_v5_1_18.cmp2s_v [\cmp2s_v(c_bus_width=33,c_regist...]
+Compiling architecture synth of entity div_gen_v5_1_18.bip_sdivider_synth [\bip_sdivider_synth(c_xdevicefam...]
+Compiling architecture synth of entity div_gen_v5_1_18.div_gen_synth [\div_gen_synth(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity div_gen_v5_1_18.div_gen_v5_1_18_viv [\div_gen_v5_1_18_viv(c_xdevicefa...]
+Compiling architecture xilinx of entity div_gen_v5_1_18.div_gen_v5_1_18 [\div_gen_v5_1_18(c_xdevicefamily...]
+Compiling architecture div_arch of entity xil_defaultlib.div [div_default]
+Compiling architecture virtex of entity div_gen_v5_1_18.dividervdc_v [\dividervdc_v(bus_num=32,bus_div...]
+Compiling architecture synth of entity div_gen_v5_1_18.bip_sdivider_synth [\bip_sdivider_synth(c_xdevicefam...]
+Compiling architecture synth of entity div_gen_v5_1_18.div_gen_synth [\div_gen_synth(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity div_gen_v5_1_18.div_gen_v5_1_18_viv [\div_gen_v5_1_18_viv(c_xdevicefa...]
+Compiling architecture xilinx of entity div_gen_v5_1_18.div_gen_v5_1_18 [\div_gen_v5_1_18(c_xdevicefamily...]
+Compiling architecture divu_arch of entity xil_defaultlib.divu [divu_default]
+Compiling module xil_defaultlib.MDU
+Compiling module xil_defaultlib.simMDU
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot simMDU_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1487.480 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simMDU_behav -key {Behavioral:sim_1:Functional:simMDU} -tclbatch {simMDU.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source simMDU.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 1000ns
+FATAL_ERROR: Iteration limit 10000 is reached. Possible zero delay oscillation detected where simulation time can not advance. Please check your source code. Note that the iteration limit can be changed using switch -maxdeltaid.
+Time: 65 ns  Iteration: 10000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simMDU_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 1487.480 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jul 25 22:02:50 2021...

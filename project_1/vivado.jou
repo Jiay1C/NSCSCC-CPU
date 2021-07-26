@@ -2,19 +2,208 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Sun Jul 25 22:00:32 2021
-# Process ID: 26024
+# Start of session at: Mon Jul 26 15:48:03 2021
+# Process ID: 2084
 # Current directory: C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14552 C:\Users\Microapple\OneDrive - Rain\NSCSCC\project_1\project_1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13552 C:\Users\Microapple\OneDrive - Rain\NSCSCC\project_1\project_1.xpr
 # Log file: C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/vivado.log
 # Journal file: C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.xpr}
 update_compile_order -fileset sources_1
+close [ open {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/simMDU2.v} w ]
+add_files {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/simMDU2.v}}
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top simMDU2 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source simMDU2.tcl
+close_sim
+launch_simulation
+source simMDU2.tcl
+close_sim
+launch_simulation
+source simMDU2.tcl
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+close_sim
+launch_simulation
+source Sim1.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top simMDU2 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+close_sim
+launch_simulation
+source simMDU2.tcl
+close_sim
+launch_simulation
+source simMDU2.tcl
+close_sim
+launch_simulation
+source simMDU2.tcl
+close_sim
+launch_simulation
+source simMDU2.tcl
+close_sim
+launch_simulation
+source simMDU2.tcl
+close_sim
+launch_simulation
+source simMDU2.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+source simMDU2.tcl
+close_sim
+launch_simulation
+source simMDU2.tcl
+close_sim
+launch_simulation
+source simMDU2.tcl
+close_sim
+launch_simulation
+source simMDU2.tcl
+close_sim
+launch_simulation
+source simMDU2.tcl
+close_sim
+launch_simulation
+source simMDU2.tcl
+close_sim
+launch_simulation
+source simMDU2.tcl
+close_sim
+launch_simulation
+source simMDU2.tcl
+close_sim
+launch_simulation
+source simMDU2.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Sim1 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+close_sim
+launch_simulation
+source Sim1.tcl
+close_sim
+launch_simulation
+source Sim1.tcl
+close_sim
+launch_simulation
+source Sim1.tcl
+close_sim
+launch_simulation
+source Sim1.tcl
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_sim
+launch_simulation
+source Sim1.tcl
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_sim
+launch_simulation
+source Sim1.tcl
+refresh_design
+close_sim
+launch_simulation
+source Sim1.tcl
+close_sim
+launch_simulation
+source Sim1.tcl
+close_sim
+launch_simulation
+source Sim1.tcl
+close_sim
+launch_simulation
+source Sim1.tcl
+close_sim
+launch_simulation
+source Sim1.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+source Sim1.tcl
+close_sim
+launch_simulation
+source Sim1.tcl
+close_sim
+launch_simulation
+source Sim1.tcl
+refresh_design
+close_sim
+launch_simulation
+source Sim1.tcl
+refresh_design
+refresh_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top simMDU [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+close_sim
 launch_simulation
 source simMDU.tcl
 close_sim
 launch_simulation
 source simMDU.tcl
+close_sim
+launch_simulation
+source simMDU.tcl
+refresh_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Sim1 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+source Sim1.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top simMDU [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+source simMDU.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Sim1 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+source Sim1.tcl
+close_sim
+launch_simulation
+source Sim1.tcl
+close_sim
+launch_simulation
+source Sim1.tcl
 close_sim
