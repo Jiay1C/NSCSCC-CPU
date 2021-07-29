@@ -3,6 +3,7 @@
 module IF(
     input CLK,
     input RST,
+    input PCEN,
     input PCSrc1,
     input PCSrc2,
     input [31:0]inPC1,
@@ -20,6 +21,7 @@ module IF(
     PC pc (
     .CLK(~CLK),
     .RST(RST),
+    .PCEN(PCEN),
     .PCSrc(PCSrc),
     .inPC(inPC),
     .outPC(outPC)

@@ -16,6 +16,7 @@ module ID(
     output [31:0]RDataA,
     output [31:0]RDataB,
     output [31:0]imm32,
+    output [4:0]rs,
     output [4:0]rt,
     output [4:0]rd,
     output [4:0]shamt,
@@ -36,14 +37,15 @@ module ID(
     output [5:0]BranchType,
     output [31:0]ExtraData,
     output [1:0]MemSize,
-    output MemSignExt
+    output MemSignExt,
+    output [1:0]RDataValid,
+    output [1:0]HILOValid
     );
 
     wire [2:0]ExtraDataSrc;
     wire [31:0]HI;
     wire [31:0]LO;
 
-    wire [4:0]rs;
     wire [15:0]imm16;
     wire [5:0]opcode;
     wire [5:0]funct;
@@ -51,7 +53,7 @@ module ID(
     wire SignExt;
 
     assign imm32=SignExt? {16'b0,imm16}:{{16{imm16[15]}},imm16};
-
+    assign HILOValid=ExtraDataSrc[2:1];
     assign ExtraData=ExtraDataSrc[0]?inPC:
                     (ExtraDataSrc[1]?HI:
                     (ExtraDataSrc[2]?LO:32'b0));
@@ -94,7 +96,8 @@ module ID(
         .outPC(outPC),
         .BranchType(BranchType),
         .MemSize(MemSize),
-        .MemSignExt(MemSignExt)
+        .MemSignExt(MemSignExt),
+        .RDataValid(RDataValid)
     );
 
     RegHILO reghilo(

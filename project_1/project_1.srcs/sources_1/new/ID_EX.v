@@ -3,6 +3,7 @@
 module ID_EX(
     input CLK,
     input RST,
+    input WRPause,
     input [31:0]inRDataA,
     input [31:0]inRDataB,
     input [31:0]inimm32,
@@ -33,10 +34,10 @@ module ID_EX(
     output reg [4:0]outrt,
     output reg [4:0]outrd,
     output reg [4:0]outshamt,
-    output reg outRegWrite,
-    output reg outHIWrite,
-    output reg outLOWrite,
-    output reg outHILOWrite,
+    output outRegWrite,
+    output outHIWrite,
+    output outLOWrite,
+    output outHILOWrite,
     output reg outPCSrc,
     output reg outMemWrite,
     output reg outMemtoReg,
@@ -53,8 +54,14 @@ module ID_EX(
     output reg [31:0]outPC
     );
     
+    reg outRegWrite_reg;
+    reg outHIWrite_reg;
+    reg outLOWrite_reg;
+    reg outHILOWrite_reg;
+
+    assign {outRegWrite,outHIWrite,outLOWrite,outHILOWrite}=WRPause?0:{outRegWrite_reg,outHIWrite_reg,outLOWrite_reg,outHILOWrite_reg};
     always @(posedge CLK) begin
-        if(RST) {outRDataA,outRDataB,outimm32,outrt,outrd,outshamt,outRegWrite,outHIWrite,outLOWrite,outHILOWrite,outPCSrc,outMemWrite,outMemtoReg,outExtratoReg,outALUSrc1,outALUSrc2,outALUOP,outMDUOP,outRegDst,outBranchType,outExtraData,outMemSize,outMemSignExt,outPC}<=0;
+        if(RST) {outRDataA,outRDataB,outimm32,outrt,outrd,outshamt,outRegWrite_reg,outHIWrite_reg,outLOWrite_reg,outHILOWrite_reg,outPCSrc,outMemWrite,outMemtoReg,outExtratoReg,outALUSrc1,outALUSrc2,outALUOP,outMDUOP,outRegDst,outBranchType,outExtraData,outMemSize,outMemSignExt,outPC}<=0;
         else begin
             outRDataA<=inRDataA;
             outRDataB<=inRDataB;
@@ -62,10 +69,10 @@ module ID_EX(
             outrt<=inrt;
             outrd<=inrd;
             outshamt<=inshamt;
-            outRegWrite<=inRegWrite;
-            outHIWrite<=inHIWrite;
-            outLOWrite<=inLOWrite;
-            outHILOWrite<=inHILOWrite;
+            outRegWrite_reg<=inRegWrite;
+            outHIWrite_reg<=inHIWrite;
+            outLOWrite_reg<=inLOWrite;
+            outHILOWrite_reg<=inHILOWrite;
             outPCSrc<=inPCSrc;
             outMemWrite<=inMemWrite;
             outMemtoReg<=inMemtoReg;

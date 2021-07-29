@@ -14,10 +14,38 @@ module Top (
     wire CLK_MEM;
     wire CLK_MEM_WB;
     wire CLK_WB;
+    wire WRPause_CU;
+    wire ControlPause_CU;
+    wire PCEN_CU;
 
     CU cu(
         .CLK(CLK),
+        .RST(RST),
         .MDUPause(MDUPause_EX),
+        .rs(rs_ID),
+        .rt(rt_ID),
+        .RDataValid(RDataValid_ID),
+        .WAddr_EX(WAddr_EX),
+        .WAddr_MEM(WAddr_EX_MEM),
+        .WAddr_WB(WAddr_MEM_WB),
+        .RegWrite_EX(RegWrite_ID_EX),
+        .RegWrite_MEM(RegWrite_EX_MEM),
+        .RegWrite_WB(RegWrite_MEM_WB),
+        .HILOValid(HILOValid_ID),
+        .HIWrite_EX(HIWrite_ID_EX),
+        .HIWrite_MEM(HIWrite_EX_MEM),
+        .HIWrite_WB(HIWrite_MEM_WB),
+        .LOWrite_EX(LOWrite_ID_EX),
+        .LOWrite_MEM(LOWrite_EX_MEM),
+        .LOWrite_WB(LOWrite_MEM_WB),
+        .HILOWrite_EX(HILOWrite_ID_EX),
+        .HILOWrite_MEM(HILOWrite_EX_MEM),
+        .HILOWrite_WB(HILOWrite_MEM_WB),
+        .Jump_ID(PCSrcForward_ID),
+        .Branch_ID(PCSrc_ID),
+        .Branch_EX(PCSrc_ID_EX),
+        .Branch_MEM(PCSrc_MEM),
+        
         .CLK_IF(CLK_IF),
         .CLK_IF_ID(CLK_IF_ID),
         .CLK_ID(CLK_ID),
@@ -26,7 +54,10 @@ module Top (
         .CLK_EX_MEM(CLK_EX_MEM),
         .CLK_MEM(CLK_MEM),
         .CLK_MEM_WB(CLK_MEM_WB),
-        .CLK_WB(CLK_WB)
+        .CLK_WB(CLK_WB),
+        .WRPause(WRPause_CU),
+        .ControlPause(ControlPause_CU),
+        .PCEN(PCEN_CU)
     );
     
     wire [31:0]PC_IF;
@@ -35,6 +66,7 @@ module Top (
     IF If(
         .CLK(CLK_IF),
         .RST(RST),
+        .PCEN(PCEN_CU),
         .PCSrc1(PCSrc_MEM),
         .inPC1(PC_EX_MEM),
         .PCSrc2(PCSrcForward_ID),
@@ -49,7 +81,7 @@ module Top (
 
     IF_ID if_id(
         .CLK(~CLK_IF_ID),
-        .RST(RST),
+        .RST(RST|ControlPause_CU),
         .inPC(PC_IF),
         .inInst(Inst_IF),
 
@@ -61,6 +93,7 @@ module Top (
     wire [31:0]RDataA_ID;
     wire [31:0]RDataB_ID;
     wire [31:0]imm32_ID;
+    wire [4:0]rs_ID;
     wire [4:0]rt_ID;
     wire [4:0]rd_ID;
     wire [4:0]shamt_ID;
@@ -82,6 +115,8 @@ module Top (
     wire [31:0]ExtraData_ID;
     wire [1:0]MemSize_ID;
     wire MemSignExt_ID;
+    wire [1:0]RDataValid_ID;
+    wire [1:0]HILOValid_ID;
 
     ID id(
         .CLK(CLK_ID),
@@ -100,6 +135,7 @@ module Top (
         .RDataA(RDataA_ID),
         .RDataB(RDataB_ID),
         .imm32(imm32_ID),
+        .rs(rs_ID),
         .rt(rt_ID),
         .rd(rd_ID),
         .shamt(shamt_ID),
@@ -120,7 +156,9 @@ module Top (
         .BranchType(BranchType_ID),
         .ExtraData(ExtraData_ID),
         .MemSize(MemSize_ID),
-        .MemSignExt(MemSignExt_ID)
+        .MemSignExt(MemSignExt_ID),
+        .RDataValid(RDataValid_ID),
+        .HILOValid(HILOValid_ID)
     );
 
     wire [31:0]RDataA_ID_EX;
@@ -151,6 +189,7 @@ module Top (
     ID_EX id_ex(
         .CLK(~CLK_ID_EX),
         .RST(RST),
+        .WRPause(WRPause_CU),
         .inRDataA(RDataA_ID),
         .inRDataB(RDataB_ID),
         .inimm32(imm32_ID),

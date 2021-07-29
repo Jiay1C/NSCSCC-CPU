@@ -19,6 +19,7 @@ verilog xil_defaultlib  \
 "../../../../project_1.srcs/sources_1/new/RegFile.v" \
 "../../../../project_1.srcs/sources_1/new/RegHILO.v" \
 "../../../../project_1.srcs/sources_1/new/WB.v" \
+"../../../../project_1.srcs/sources_1/new/WRConflict.v" \
 "../../../../project_1.srcs/sim_1/new/Sim1.v" \
 
 # compile glbl module
