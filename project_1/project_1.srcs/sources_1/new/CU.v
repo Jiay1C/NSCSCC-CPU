@@ -27,6 +27,10 @@ module CU(
     input Branch_ID,
     input Branch_EX,
     input Branch_MEM,
+    input ERET_ID,
+    input ERET_EX,
+    input ERET_MEM,
+    input ERET_WB,
     output CLK_IF,
     output CLK_IF_ID,
     output CLK_ID,
@@ -44,11 +48,14 @@ module CU(
     wire WRPause_WRConflict;
     wire JumpPause;
     wire BranchPause;
+    wire ERETPause;
     reg WRPause0;
     reg JumpPause1;
     reg JumpPause0;
     reg BranchPause0;
     reg BranchPause1;
+    reg ERETPause0;
+    reg ERETPause1;
 
     reg IF_EN;
     reg IF_ID_EN;
@@ -62,7 +69,8 @@ module CU(
 
     assign JumpPause=JumpPause0||JumpPause1;
     assign BranchPause=BranchPause0||BranchPause1;
-    assign ControlPause=JumpPause||BranchPause;
+    assign ERETPause=ERETPause0||ERETPause1;
+    assign ControlPause=JumpPause||BranchPause||ERETPause;
     assign PCEN=~BranchPause0;
 
     assign CLK_IF=CLK|~IF_EN;
@@ -82,15 +90,21 @@ module CU(
     end
 
     always @(posedge CLK) begin
-        if(RST) {WRPause0,WRPause,JumpPause1,JumpPause0,BranchPause1,BranchPause0}<=0;
+        if(RST) {WRPause0,JumpPause1,JumpPause0,BranchPause1,BranchPause0,ERETPause0,ERETPause1}<=0;
         else begin
             WRPause0<=WRPause_WRConflict;
-            WRPause<=WRPause0;
             JumpPause0<=Jump_ID;
             JumpPause1<=JumpPause0;
             BranchPause0<=Branch_ID||Branch_EX||Branch_MEM;
             BranchPause1<=BranchPause0;
+            ERETPause0<=ERET_ID||ERET_EX||ERET_MEM||ERET_WB;
+            ERETPause1<=ERETPause0;
         end
+    end
+
+    always @(negedge CLK) begin
+        if(RST) WRPause<=0;
+        else WRPause<=WRPause0;
     end
 
     WRConflict wrconflict(

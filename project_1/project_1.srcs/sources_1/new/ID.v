@@ -39,7 +39,11 @@ module ID(
     output [1:0]MemSize,
     output MemSignExt,
     output [1:0]RDataValid,
-    output [1:0]HILOValid
+    output [1:0]HILOValid,
+    output MTC0,
+    output ERET,
+    output [4:0]ExcCode,
+    output CP0toReg
     );
 
     wire [2:0]ExtraDataSrc;
@@ -76,6 +80,7 @@ module ID(
         .RDataA(RDataA),
         .JumpTarget(JumpTarget),
         .inPC(inPC),
+        .rs(rs),
         .rt(rt),
         .RegWrite(RegWrite),
         .MemWrite(MemWrite),
@@ -97,7 +102,11 @@ module ID(
         .BranchType(BranchType),
         .MemSize(MemSize),
         .MemSignExt(MemSignExt),
-        .RDataValid(RDataValid)
+        .RDataValid(RDataValid),
+        .MTC0(MTC0),
+        .ERET(ERET),
+        .ExcCode(ExcCode),
+        .CP0toReg(CP0toReg)
     );
 
     RegHILO reghilo(

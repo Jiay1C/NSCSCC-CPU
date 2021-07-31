@@ -6,8 +6,10 @@ module IF(
     input PCEN,
     input PCSrc1,
     input PCSrc2,
+    input PCSrc3,
     input [31:0]inPC1,
     input [31:0]inPC2,
+    input [31:0]inPC3,
     output [31:0]outPC,
     output [31:0]Inst
     );
@@ -15,8 +17,8 @@ module IF(
     wire [31:0]inPC;
     wire PCSrc;
 
-    assign inPC=PCSrc1?inPC1:inPC2;
-    assign PCSrc=PCSrc1|PCSrc2;
+    assign inPC=PCSrc3?inPC3:(PCSrc1?inPC1:inPC2);
+    assign PCSrc=PCSrc1||PCSrc2||PCSrc3;
 
     PC pc (
     .CLK(~CLK),
