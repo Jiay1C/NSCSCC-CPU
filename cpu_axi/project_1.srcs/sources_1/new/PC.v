@@ -1,0 +1,20 @@
+`timescale 1ns / 1ps
+
+module PC(
+    input CLK,
+    input RST,
+    input PCEN,
+    input PCSrc,
+    input [31:0]inPC,
+    output reg [31:0]outPC
+    );
+    reg [31:0]PC0;
+    always @(posedge CLK) begin
+        if(RST) {outPC,PC0}=0;
+        else begin
+            if(PCSrc) begin PC0=outPC;outPC=inPC; end
+            else if(PCEN) begin PC0=outPC;outPC=outPC+32'h4; end
+            else outPC=PC0;
+        end
+    end
+endmodule

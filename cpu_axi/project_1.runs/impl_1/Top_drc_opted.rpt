@@ -1,0 +1,324 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Sun Aug  1 18:34:32 2021
+| Host         : DESKTOP-9V8F9RL running 64-bit major release  (build 9200)
+| Command      : report_drc -file Top_drc_opted.rpt -pb Top_drc_opted.pb -rpx Top_drc_opted.rpx
+| Design       : Top
+| Device       : xc7a200tfbg676-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 53
++-------------+------------------+-------------------------------------------------------------+------------+
+| Rule        | Severity         | Description                                                 | Violations |
++-------------+------------------+-------------------------------------------------------------+------------+
+| NSTD-1      | Critical Warning | Unspecified I/O Standard                                    | 1          |
+| UCIO-1      | Critical Warning | Unconstrained Logical Port                                  | 1          |
+| CFGBVS-1    | Warning          | Missing CFGBVS and CONFIG_VOLTAGE Design Properties         | 1          |
+| DPIP-1      | Warning          | Input pipelining                                            | 8          |
+| DPOP-1      | Warning          | PREG Output pipelining                                      | 4          |
+| DPOP-2      | Warning          | MREG Output pipelining                                      | 4          |
+| IOSR-1      | Warning          | IOB set reset sharing                                       | 32         |
+| PLHOLDVIO-2 | Warning          | Non-Optimal connections which could lead to hold violations | 2          |
++-------------+------------------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+NSTD-1#1 Critical Warning
+Unspecified I/O Standard  
+201 out of 201 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: araddr[31:0], arburst[1:0], arcache[3:0], arid[3:0], arlen[7:0],
+arlock[1:0], arprot[2:0], arsize[2:0], awaddr[31:0], awburst[1:0],
+awcache[3:0], awid[3:0], awlen[7:0], awlock[1:0], awprot[2:0]
+ (the first 15 of 33 listed).
+Related violations: <none>
+
+UCIO-1#1 Critical Warning
+Unconstrained Logical Port  
+201 out of 201 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: araddr[31:0], arburst[1:0], arcache[3:0], arid[3:0], arlen[7:0],
+arlock[1:0], arprot[2:0], arsize[2:0], awaddr[31:0], awburst[1:0],
+awcache[3:0], awid[3:0], awlen[7:0], awlock[1:0], awprot[2:0]
+ (the first 15 of 33 listed).
+Related violations: <none>
+
+CFGBVS-1#1 Warning
+Missing CFGBVS and CONFIG_VOLTAGE Design Properties  
+Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+DPIP-1#1 Warning
+Input pipelining  
+DSP ex/mdu/p_1_out input ex/mdu/p_1_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP ex/mdu/p_1_out input ex/mdu/p_1_out/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP ex/mdu/p_1_out__0 input ex/mdu/p_1_out__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#4 Warning
+Input pipelining  
+DSP ex/mdu/p_1_out__0 input ex/mdu/p_1_out__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#5 Warning
+Input pipelining  
+DSP ex/mdu/p_1_out__1 input ex/mdu/p_1_out__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#6 Warning
+Input pipelining  
+DSP ex/mdu/p_1_out__1 input ex/mdu/p_1_out__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#7 Warning
+Input pipelining  
+DSP ex/mdu/p_1_out__2 input ex/mdu/p_1_out__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#8 Warning
+Input pipelining  
+DSP ex/mdu/p_1_out__2 input ex/mdu/p_1_out__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-1#1 Warning
+PREG Output pipelining  
+DSP ex/mdu/p_1_out output ex/mdu/p_1_out/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#2 Warning
+PREG Output pipelining  
+DSP ex/mdu/p_1_out__0 output ex/mdu/p_1_out__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#3 Warning
+PREG Output pipelining  
+DSP ex/mdu/p_1_out__1 output ex/mdu/p_1_out__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#4 Warning
+PREG Output pipelining  
+DSP ex/mdu/p_1_out__2 output ex/mdu/p_1_out__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-2#1 Warning
+MREG Output pipelining  
+DSP ex/mdu/p_1_out multiplier stage ex/mdu/p_1_out/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#2 Warning
+MREG Output pipelining  
+DSP ex/mdu/p_1_out__0 multiplier stage ex/mdu/p_1_out__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#3 Warning
+MREG Output pipelining  
+DSP ex/mdu/p_1_out__1 multiplier stage ex/mdu/p_1_out__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#4 Warning
+MREG Output pipelining  
+DSP ex/mdu/p_1_out__2 multiplier stage ex/mdu/p_1_out__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+IOSR-1#1 Warning
+IOB set reset sharing  
+IO rdata[0] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#2 Warning
+IOB set reset sharing  
+IO rdata[10] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#3 Warning
+IOB set reset sharing  
+IO rdata[11] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#4 Warning
+IOB set reset sharing  
+IO rdata[12] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#5 Warning
+IOB set reset sharing  
+IO rdata[13] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#6 Warning
+IOB set reset sharing  
+IO rdata[14] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#7 Warning
+IOB set reset sharing  
+IO rdata[15] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#8 Warning
+IOB set reset sharing  
+IO rdata[16] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#9 Warning
+IOB set reset sharing  
+IO rdata[17] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#10 Warning
+IOB set reset sharing  
+IO rdata[18] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#11 Warning
+IOB set reset sharing  
+IO rdata[19] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#12 Warning
+IOB set reset sharing  
+IO rdata[1] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#13 Warning
+IOB set reset sharing  
+IO rdata[20] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#14 Warning
+IOB set reset sharing  
+IO rdata[21] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#15 Warning
+IOB set reset sharing  
+IO rdata[22] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#16 Warning
+IOB set reset sharing  
+IO rdata[23] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#17 Warning
+IOB set reset sharing  
+IO rdata[24] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#18 Warning
+IOB set reset sharing  
+IO rdata[25] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#19 Warning
+IOB set reset sharing  
+IO rdata[26] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#20 Warning
+IOB set reset sharing  
+IO rdata[27] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#21 Warning
+IOB set reset sharing  
+IO rdata[28] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#22 Warning
+IOB set reset sharing  
+IO rdata[29] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#23 Warning
+IOB set reset sharing  
+IO rdata[2] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#24 Warning
+IOB set reset sharing  
+IO rdata[30] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#25 Warning
+IOB set reset sharing  
+IO rdata[31] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#26 Warning
+IOB set reset sharing  
+IO rdata[3] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#27 Warning
+IOB set reset sharing  
+IO rdata[4] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#28 Warning
+IOB set reset sharing  
+IO rdata[5] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#29 Warning
+IOB set reset sharing  
+IO rdata[6] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#30 Warning
+IOB set reset sharing  
+IO rdata[7] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#31 Warning
+IOB set reset sharing  
+IO rdata[8] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#32 Warning
+IOB set reset sharing  
+IO rdata[9] connects to flops which have these RST_IBUF, cu/RST set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT axi/data_req_P_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+mem/data_req_reg_P
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT axi/inst_req_C_i_2 is driving clock pin of 2 cells. This could lead to large hold time violations. Involved cells are:
+If/inst_req_reg_C, If/inst_req_reg_P
+Related violations: <none>
+
+

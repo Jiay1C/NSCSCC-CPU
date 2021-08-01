@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Jul 30 20:35:06 2021
+# Process ID: 31720
+# Current directory: C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19568 C:\Users\Microapple\OneDrive - Rain\NSCSCC\project_1\project_1.xpr
+# Log file: C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/vivado.log
+# Journal file: C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.xpr}
+update_compile_order -fileset sources_1
+close [ open {C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/CP0.v} w ]
+add_files {{C:/Users/Microapple/OneDrive - Rain/NSCSCC/project_1/project_1.srcs/sources_1/new/CP0.v}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
