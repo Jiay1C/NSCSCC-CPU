@@ -192,6 +192,7 @@ module Top (
         .CLK(CLK_IF),
         .RST(RST),
         .PCEN(PCEN_CU),
+        .MemBusy(MemEN_EX_MEM),
         .PCSrc1(PCSrc_MEM),
         .inPC1(PC_EX_MEM),
         .PCSrc2(PCSrcForward_ID),
@@ -209,7 +210,8 @@ module Top (
         .inst_req(inst_req),
         .inst_wr(inst_wr),
         .inst_size(inst_size),
-        .inst_addr(inst_addr)
+        .inst_addr(inst_addr),
+        .inst_wdata(inst_wdata)
     );
 
     wire [31:0]PC_IF_ID;
@@ -257,6 +259,7 @@ module Top (
     wire ERET_ID;
     wire [4:0]ExcCode_ID;
     wire CP0toReg_ID;
+    wire MemEN_ID;
 
     ID id(
         .CLK(CLK_ID),
@@ -302,7 +305,8 @@ module Top (
         .MTC0(MTC0_ID),
         .ERET(ERET_ID),
         .ExcCode(ExcCode_ID),
-        .CP0toReg(CP0toReg_ID)
+        .CP0toReg(CP0toReg_ID),
+        .MemEN(MemEN_ID)
     );
 
     wire [31:0]RDataA_ID_EX;
@@ -333,6 +337,7 @@ module Top (
     wire ERET_ID_EX;
     wire [4:0]ExcCode_ID_EX;
     wire CP0toReg_ID_EX;
+    wire MemEN_ID_EX;
 
     ID_EX id_ex(
         .CLK(~CLK_ID_EX),
@@ -366,6 +371,7 @@ module Top (
         .inERET(ERET_ID),
         .inExcCode(ExcCode_ID),
         .inCP0toReg(CP0toReg_ID),
+        .inMemEN(MemEN_ID),
 
         .outRDataA(RDataA_ID_EX),
         .outRDataB(RDataB_ID_EX),
@@ -394,7 +400,8 @@ module Top (
         .outMTC0(MTC0_ID_EX),
         .outERET(ERET_ID_EX),
         .outExcCode(ExcCode_ID_EX),
-        .outCP0toReg(CP0toReg_ID_EX)
+        .outCP0toReg(CP0toReg_ID_EX),
+        .outMemEN(MemEN_ID_EX)
     );
 
     wire [4:0]WAddr_EX;
@@ -461,6 +468,7 @@ module Top (
     wire CP0toReg_EX_MEM;
     wire [4:0]CP0Addr_EX_MEM;
     wire [31:0]PC0_EX_MEM;
+    wire MemEN_EX_MEM;
 
     EX_MEM ex_mem(
         .CLK(~CLK_EX_MEM),
@@ -492,6 +500,7 @@ module Top (
         .inCP0toReg(CP0toReg_ID_EX),
         .inCP0Addr(rd_ID_EX),
         .inPC0(PC_ID_EX),
+        .inMemEN(MemEN_ID_EX),
 
         .outPC(PC_EX_MEM),
         .outALURes(ALURes_EX_MEM),
@@ -519,7 +528,8 @@ module Top (
         .outExcCode(ExcCode_EX_MEM),
         .outCP0toReg(CP0toReg_EX_MEM),
         .outCP0Addr(CP0Addr_EX_MEM),
-        .outPC0(PC0_EX_MEM)
+        .outPC0(PC0_EX_MEM),
+        .outMemEN(MemEN_EX_MEM)
     );
 
     wire RegWrite_MEM;
@@ -540,6 +550,7 @@ module Top (
         .BranchType(BranchType_EX_MEM),
         .MemSize(MemSize_EX_MEM),
         .MemSignExt(MemSignExt_EX_MEM),
+        .MemEN(MemEN_EX_MEM),
 
         .outRegWrite(RegWrite_MEM),
         .MemRData(MemRData_MEM),

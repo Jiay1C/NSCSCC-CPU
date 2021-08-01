@@ -4,6 +4,7 @@ module IF(
     input CLK,
     input RST,
     input PCEN,
+    input MemBusy,
     input PCSrc1,
     input PCSrc2,
     input PCSrc3,
@@ -20,19 +21,22 @@ module IF(
     output reg inst_req,
     output inst_wr,
     output [1:0]inst_size,
-    output [31:0]inst_addr
+    output [31:0]inst_addr,
+    output [31:0]inst_wdata
     );
     
     wire [31:0]inPC;
     wire PCSrc;
+    wire IFEN;
 
+    assign IFEN=(~MemBusy)&&PCEN;
     assign inPC=PCSrc3?inPC3:(PCSrc1?inPC1:inPC2);
     assign PCSrc=PCSrc1||PCSrc2||PCSrc3;
 
     PC pc (
     .CLK(~CLK),
     .RST(RST),
-    .PCEN(PCEN),
+    .PCEN(IFEN),
     .PCSrc(PCSrc),
     .inPC(inPC),
     .outPC(outPC)
@@ -50,10 +54,11 @@ module IF(
     assign inst_size=2'h2;
     assign inst_addr=outPC;
     assign inst_wr=0;
+    assign inst_wdata=32'b0;
     assign IMPause=inst_req;
 
     always @(posedge CLK or posedge inst_addr_ok or posedge inst_data_ok) begin
-        if(CLK) begin
+        if(CLK&&IFEN) begin
             inst_req=1;
         end
         else if(inst_addr_ok&&inst_data_ok) begin

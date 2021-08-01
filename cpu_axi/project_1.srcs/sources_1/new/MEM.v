@@ -14,8 +14,9 @@ module MEM(
     input [5:0]BranchType,
     input [1:0]MemSize,
     input MemSignExt,
+    input MemEN,
     output outRegWrite,
-    output [31:0]MemRData,
+    output reg [31:0]MemRData,
     output outPCSrc,
     output DMPause,
     //SRAM
@@ -29,9 +30,9 @@ module MEM(
     output [31:0]data_wdata
     );
 
-    //reg [3:0]Write;
-    //reg [31:0]WData;
-    //wire [31:0]RData;
+    reg [3:0]Write;
+    reg [31:0]WData;
+    wire [31:0]RData;
 
     assign outRegWrite=inRegWrite&(inPCSrc^~outPCSrc);
 
@@ -45,23 +46,22 @@ module MEM(
         );
     
 
-    assign data_wdata=MemWData;
+    assign data_wdata=WData;
     assign data_size=((MemSize==2'h2)?2'h0:
                      ((MemSize==2'h1)?2'h1:2'h2));
     assign data_addr=ALURes;
-    assign MemRData=data_rdata;
     assign data_wr=MemWrite;
     assign DMPause=data_req;
+    assign RData=data_rdata;
 
     always @(posedge CLK or posedge data_addr_ok or posedge data_data_ok) begin
-        if(CLK) begin
+        if(CLK&&MemEN) begin
             data_req=1;
         end
         else if(data_addr_ok&&data_data_ok) begin
             data_req=0;
         end
     end
-    /*
     always @(*) begin
         case (MemSize)
             2'h0: begin Write={4{MemWrite}};WData=MemWData;MemRData=RData; end
@@ -105,6 +105,7 @@ module MEM(
         endcase
     end
 
+    /*
     DM dm (
     .clka(CLK),    // input wire clka
     .wea(Write),      // input wire [0 : 0] wea

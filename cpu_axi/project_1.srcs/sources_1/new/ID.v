@@ -43,7 +43,8 @@ module ID(
     output MTC0,
     output ERET,
     output [4:0]ExcCode,
-    output CP0toReg
+    output CP0toReg,
+    output MemEN
     );
 
     wire [2:0]ExtraDataSrc;
@@ -106,7 +107,8 @@ module ID(
         .MTC0(MTC0),
         .ERET(ERET),
         .ExcCode(ExcCode),
-        .CP0toReg(CP0toReg)
+        .CP0toReg(CP0toReg),
+        .MemEN(MemEN)
     );
 
     RegHILO reghilo(

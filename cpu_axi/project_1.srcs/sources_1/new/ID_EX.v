@@ -32,6 +32,7 @@ module ID_EX(
     input inERET,
     input [4:0]inExcCode,
     input inCP0toReg,
+    input inMemEN,
     output reg [31:0]outRDataA,
     output reg [31:0]outRDataB,
     output reg [31:0]outimm32,
@@ -59,7 +60,8 @@ module ID_EX(
     output reg outMTC0,
     output reg outERET,
     output reg [4:0]outExcCode,
-    output reg outCP0toReg
+    output reg outCP0toReg,
+    output reg outMemEN
     );
     
     reg outRegWrite_reg;
@@ -69,7 +71,7 @@ module ID_EX(
 
     assign {outRegWrite,outHIWrite,outLOWrite,outHILOWrite}=WRPause?0:{outRegWrite_reg,outHIWrite_reg,outLOWrite_reg,outHILOWrite_reg};
     always @(posedge CLK) begin
-        if(RST) {outRDataA,outRDataB,outimm32,outrt,outrd,outshamt,outRegWrite_reg,outHIWrite_reg,outLOWrite_reg,outHILOWrite_reg,outPCSrc,outMemWrite,outMemtoReg,outExtratoReg,outALUSrc1,outALUSrc2,outALUOP,outMDUOP,outRegDst,outBranchType,outExtraData,outMemSize,outMemSignExt,outPC,outMTC0,outERET,outExcCode,outCP0toReg}<=0;
+        if(RST) {outRDataA,outRDataB,outimm32,outrt,outrd,outshamt,outRegWrite_reg,outHIWrite_reg,outLOWrite_reg,outHILOWrite_reg,outPCSrc,outMemWrite,outMemtoReg,outExtratoReg,outALUSrc1,outALUSrc2,outALUOP,outMDUOP,outRegDst,outBranchType,outExtraData,outMemSize,outMemSignExt,outPC,outMTC0,outERET,outExcCode,outCP0toReg,outMemEN}<=0;
         else begin
             outRDataA<=inRDataA;
             outRDataB<=inRDataB;
@@ -99,6 +101,7 @@ module ID_EX(
             outERET<=inERET;
             outExcCode<=inExcCode;
             outCP0toReg<=inCP0toReg;
+            outMemEN<=inMemEN;
         end
     end
 endmodule
