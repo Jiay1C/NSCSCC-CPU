@@ -1,0 +1,40 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_top.soc_lite.u_axi_ram.ram.inst.axi_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+==============================================================
+Test begin!
+==============================================================
+Test end!
+----PASS!!!
+$finish called at time : 2806500 ps : File "C:/Users/Microapple/Desktop/release_project/func_test_v0.01/soc_axi_func/testbench/mycpu_tb.v" Line 269
+        [  22000 ns] Test is running, debug_wb_pc = 0xbfc01c50
+        [  32000 ns] Test is running, debug_wb_pc = 0xbfc02a88
+        [  42000 ns] Test is running, debug_wb_pc = 0xbfc038bc
+        [  52000 ns] Test is running, debug_wb_pc = 0xbfc046f0
+        [  62000 ns] Test is running, debug_wb_pc = 0xbfc05524
+        [  72000 ns] Test is running, debug_wb_pc = 0xbfc06358
+        [  82000 ns] Test is running, debug_wb_pc = 0xbfc0718c
+        [  92000 ns] Test is running, debug_wb_pc = 0xbfc07fc0
+        [ 102000 ns] Test is running, debug_wb_pc = 0xbfc08df4
+        [ 112000 ns] Test is running, debug_wb_pc = 0xbfc09c28
+        [ 122000 ns] Test is running, debug_wb_pc = 0xbfc0aa5c
+        [ 132000 ns] Test is running, debug_wb_pc = 0xbfc0b890
+        [ 142000 ns] Test is running, debug_wb_pc = 0xbfc0c6c8
+        [ 152000 ns] Test is running, debug_wb_pc = 0xbfc0d4fc
+        [ 162000 ns] Test is running, debug_wb_pc = 0xbfc0e330
+        [ 172000 ns] Test is running, debug_wb_pc = 0xbfc0f164
+        [ 182000 ns] Test is running, debug_wb_pc = 0xbfc0ff98
+        [ 192000 ns] Test is running, debug_wb_pc = 0xbfc10dcc
+        [ 202000 ns] Test is running, debug_wb_pc = 0xbfc11c00
+        [ 212000 ns] Test is running, debug_wb_pc = 0xbfc12a34
+        [ 222000 ns] Test is running, debug_wb_pc = 0xbfc13868
+        [ 232000 ns] Test is running, debug_wb_pc = 0xbfc1469c
+        [ 242000 ns] Test is running, debug_wb_pc = 0xbfc154d0
+        [ 252000 ns] Test is running, debug_wb_pc = 0xbfc16308

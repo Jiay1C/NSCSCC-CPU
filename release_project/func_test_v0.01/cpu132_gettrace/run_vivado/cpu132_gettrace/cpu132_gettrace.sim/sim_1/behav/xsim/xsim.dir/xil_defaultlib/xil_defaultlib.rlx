@@ -1,0 +1,14 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/Users/Microapple/Desktop/release_project/func_test_v0.01/cpu132_gettrace/rtl/BRIDGE/bridge_1x2.v,1533655038,verilog,,C:/Users/Microapple/Desktop/release_project/func_test_v0.01/cpu132_gettrace/rtl/CONFREG/confreg.v,,bridge_1x2,,,../../../../../../rtl/xilinx_ip/clk_pll,,,,,
+C:/Users/Microapple/Desktop/release_project/func_test_v0.01/cpu132_gettrace/rtl/CONFREG/confreg.v,1557750014,verilog,,C:/Users/Microapple/Desktop/release_project/func_test_v0.01/cpu132_gettrace/rtl/cpu132/gs132_verilog.v,,confreg,,,../../../../../../rtl/xilinx_ip/clk_pll,,,,,
+C:/Users/Microapple/Desktop/release_project/func_test_v0.01/cpu132_gettrace/rtl/cpu132/gs132_verilog.v,1531191574,verilog,,C:/Users/Microapple/Desktop/release_project/func_test_v0.01/cpu132_gettrace/rtl/soc_lite_top.v,,ejtag_tap_fsm;gr_heap_2r1w_32x32;ls132r_decode_stage;ls132r_ejtag_dcr;ls132r_ejtag_hb;ls132r_ejtag_ib;ls132r_ejtag_tap;ls132r_execute_stage;ls132r_fetch_stage;ls132r_interface;ls132r_top,,,../../../../../../rtl/xilinx_ip/clk_pll,,,,,
+C:/Users/Microapple/Desktop/release_project/func_test_v0.01/cpu132_gettrace/rtl/soc_lite_top.v,1557716832,verilog,,C:/Users/Microapple/Desktop/release_project/func_test_v0.01/cpu132_gettrace/testbench/tb_top.v,,soc_lite_top,,,../../../../../../rtl/xilinx_ip/clk_pll,,,,,
+C:/Users/Microapple/Desktop/release_project/func_test_v0.01/cpu132_gettrace/rtl/xilinx_ip/clk_pll/clk_pll.v,1627889264,verilog,,C:/Users/Microapple/Desktop/release_project/func_test_v0.01/cpu132_gettrace/rtl/xilinx_ip/data_ram/sim/data_ram.v,,clk_pll,,,../../../../../../rtl/xilinx_ip/clk_pll,,,,,
+C:/Users/Microapple/Desktop/release_project/func_test_v0.01/cpu132_gettrace/rtl/xilinx_ip/clk_pll/clk_pll_clk_wiz.v,1627889264,verilog,,C:/Users/Microapple/Desktop/release_project/func_test_v0.01/cpu132_gettrace/rtl/xilinx_ip/clk_pll/clk_pll.v,,clk_pll_clk_wiz,,,../../../../../../rtl/xilinx_ip/clk_pll,,,,,
+C:/Users/Microapple/Desktop/release_project/func_test_v0.01/cpu132_gettrace/rtl/xilinx_ip/data_ram/sim/data_ram.v,1627889274,verilog,,C:/Users/Microapple/Desktop/release_project/func_test_v0.01/cpu132_gettrace/rtl/xilinx_ip/inst_ram/sim/inst_ram.v,,data_ram,,,../../../../../../rtl/xilinx_ip/clk_pll,,,,,
+C:/Users/Microapple/Desktop/release_project/func_test_v0.01/cpu132_gettrace/rtl/xilinx_ip/inst_ram/sim/inst_ram.v,1627889310,verilog,,C:/Users/Microapple/Desktop/release_project/func_test_v0.01/cpu132_gettrace/rtl/BRIDGE/bridge_1x2.v,,inst_ram,,,../../../../../../rtl/xilinx_ip/clk_pll,,,,,
+C:/Users/Microapple/Desktop/release_project/func_test_v0.01/cpu132_gettrace/run_vivado/cpu132_gettrace/cpu132_gettrace.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+C:/Users/Microapple/Desktop/release_project/func_test_v0.01/cpu132_gettrace/testbench/tb_top.v,1557735310,verilog,,,,tb_top,,,../../../../../../rtl/xilinx_ip/clk_pll,,,,,

@@ -1,0 +1,338 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Aug  2 21:46:04 2021
+# Process ID: 19348
+# Current directory: C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/run_vivado/mycpu_prj1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13380 C:\Users\Fxil\Desktop\nscscc2021_group_qualifier_submission-rc1\release_project\func_test_v0.01\soc_axi_func\run_vivado\mycpu_prj1\mycpu.xpr
+# Log file: C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/run_vivado/mycpu_prj1/vivado.log
+# Journal file: C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/run_vivado/mycpu_prj1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/run_vivado/mycpu_prj1/mycpu.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/run_vivado/mycpu_prj1'
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:28 ; elapsed = 00:00:13 . Memory (MB): peak = 737.508 ; gain = 109.160
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/run_vivado/mycpu_prj1/mycpu.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/run_vivado/mycpu_prj1/mycpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/run_vivado/mycpu_prj1/mycpu.sim/sim_1/behav/xsim/axi_ram.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/run_vivado/mycpu_prj1/mycpu.sim/sim_1/behav/xsim/inst_ram.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/run_vivado/mycpu_prj1/mycpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+"xvhdl --incr --relax -prj tb_top_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/run_vivado/mycpu_prj1/mycpu.sim/sim_1/behav/xsim'
+"xelab -wto 8de8692e6f7648c084645fde77f29b66 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_4 -L generic_baseblocks_v2_1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_20 -L fifo_generator_v13_2_5 -L axi_data_fifo_v2_1_19 -L axi_crossbar_v2_1_21 -L axi_clock_converter_v2_1_19 -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_16 -L floating_point_v7_0_17 -L xbip_dsp48_mult_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L div_gen_v5_1_16 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 8de8692e6f7648c084645fde77f29b66 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_4 -L generic_baseblocks_v2_1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_20 -L fifo_generator_v13_2_5 -L axi_data_fifo_v2_1_19 -L axi_crossbar_v2_1_21 -L axi_clock_converter_v2_1_19 -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_16 -L floating_point_v7_0_17 -L xbip_dsp48_mult_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L div_gen_v5_1_16 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 8 for port 'arlen' [C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/rtl/soc_axi_lite_top.v:327]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 8 for port 'awlen' [C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/rtl/soc_axi_lite_top.v:345]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 8 for port 'arlen' [C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/rtl/soc_axi_lite_top.v:691]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 8 for port 'awlen' [C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/rtl/soc_axi_lite_top.v:707]
+WARNING: [VRFC 10-5021] port 'aclk2x' is not connected on this instance [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/axi_crossbar_v2_1/hdl/axi_crossbar_v2_1_vl_rfs.v:3103]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package div_gen_v5_1_16.div_gen_v5_1_16_viv_comp
+Compiling package xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv_comp
+Compiling package axi_utils_v2_0_6.axi_utils_v2_0_6_pkg
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_6.global_util_pkg
+Compiling package axi_utils_v2_0_6.axi_utils_comps
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package xbip_bram18k_v3_0_6.xbip_bram18k_v3_0_6_pkg
+Compiling package div_gen_v5_1_16.div_gen_pkg
+Compiling package ieee.std_logic_signed
+Compiling package unisim.vcomponents
+Compiling package div_gen_v5_1_16.pkg_addsub
+Compiling module xil_defaultlib.cpu_axi_interface
+Compiling module xil_defaultlib.WRConflict
+Compiling module xil_defaultlib.CU
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IF
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.ID1
+Compiling module xil_defaultlib.ID2
+Compiling module xil_defaultlib.RegHILO
+Compiling module xil_defaultlib.RegFile
+Compiling module xil_defaultlib.ID
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.ALU
+Compiling architecture synth of entity div_gen_v5_1_16.c_twos_comp_viv [\c_twos_comp_viv(c_width=32,c_ai...]
+Compiling architecture virtex of entity div_gen_v5_1_16.cmp2s_v [\cmp2s_v(c_bus_width=32,c_regist...]
+Compiling architecture synth of entity div_gen_v5_1_16.c_twos_comp_viv [\c_twos_comp_viv(c_width=32,c_ai...]
+Compiling architecture virtex of entity div_gen_v5_1_16.cmp2s_v [\cmp2s_v(c_bus_width=32,c_ainit_...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture rtl of entity div_gen_v5_1_16.c_addsub_lut6 [\c_addsub_lut6(c_width=33,c_add_...]
+Compiling architecture synth of entity div_gen_v5_1_16.c_addsub_viv [\c_addsub_viv(c_a_width=33,c_b_w...]
+Compiling architecture virtex of entity div_gen_v5_1_16.addsubreg_v [\addsubreg_v(c_bus_width=33,c_ha...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity div_gen_v5_1_16.c_addsub_lut6 [\c_addsub_lut6(c_width=33,c_add_...]
+Compiling architecture synth of entity div_gen_v5_1_16.c_addsub_viv [\c_addsub_viv(c_a_width=33,c_b_w...]
+Compiling architecture virtex of entity div_gen_v5_1_16.addsubreg_v [\addsubreg_v(c_bus_width=33,c_ha...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture virtex of entity div_gen_v5_1_16.dividervdc_v [\dividervdc_v(bus_num=32,bus_div...]
+Compiling architecture synth of entity div_gen_v5_1_16.c_twos_comp_viv [\c_twos_comp_viv(c_width=33,c_ai...]
+Compiling architecture virtex of entity div_gen_v5_1_16.cmp2s_v [\cmp2s_v(c_bus_width=33,c_regist...]
+Compiling architecture synth of entity div_gen_v5_1_16.bip_sdivider_synth [\bip_sdivider_synth(c_xdevicefam...]
+Compiling architecture synth of entity div_gen_v5_1_16.div_gen_synth [\div_gen_synth(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity div_gen_v5_1_16.div_gen_v5_1_16_viv [\div_gen_v5_1_16_viv(c_xdevicefa...]
+Compiling architecture xilinx of entity div_gen_v5_1_16.div_gen_v5_1_16 [\div_gen_v5_1_16(c_xdevicefamily...]
+Compiling architecture div_arch of entity xil_defaultlib.div [div_default]
+Compiling architecture virtex of entity div_gen_v5_1_16.dividervdc_v [\dividervdc_v(bus_num=32,bus_div...]
+Compiling architecture synth of entity div_gen_v5_1_16.bip_sdivider_synth [\bip_sdivider_synth(c_xdevicefam...]
+Compiling architecture synth of entity div_gen_v5_1_16.div_gen_synth [\div_gen_synth(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity div_gen_v5_1_16.div_gen_v5_1_16_viv [\div_gen_v5_1_16_viv(c_xdevicefa...]
+Compiling architecture xilinx of entity div_gen_v5_1_16.div_gen_v5_1_16 [\div_gen_v5_1_16(c_xdevicefamily...]
+Compiling architecture divu_arch of entity xil_defaultlib.divu [divu_default]
+Compiling module xil_defaultlib.MDU
+Compiling module xil_defaultlib.EX
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.MEM
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.CP0
+Compiling module xil_defaultlib.WB
+Compiling module xil_defaultlib.mycpu_top
+Compiling module xil_defaultlib.axi_wrap
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_sync_stag...
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_bhv_ver_a...
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_bhv_ver_p...
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_CONV_VER(...
+Compiling module fifo_generator_v13_2_5.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_bhv_ver_a...
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_bhv_ver_p...
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_CONV_VER(...
+Compiling module fifo_generator_v13_2_5.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_bhv_ver_a...
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_bhv_ver_p...
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_CONV_VER(...
+Compiling module fifo_generator_v13_2_5.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module fifo_generator_v13_2_5.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_bhv_ver_a...
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_bhv_ver_p...
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_CONV_VER(...
+Compiling module fifo_generator_v13_2_5.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module axi_clock_converter_v2_1_19.axi_clock_converter_v2_1_19_axi_...
+Compiling module xil_defaultlib.axi_clock_converter
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_carry_...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_compar...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_compar...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_compar...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_compar...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_compar...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_compar...
+Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_addr_decode...
+Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_arbiter_res...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_mux_en...
+Compiling module unisims_ver.SRLC32E_default
+Compiling module axi_data_fifo_v2_1_19.axi_data_fifo_v2_1_19_ndeep_srl(...
+Compiling module axi_data_fifo_v2_1_19.axi_data_fifo_v2_1_19_axic_srl_f...
+Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_si_transact...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_mux_en...
+Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_si_transact...
+Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_splitter
+Compiling module axi_data_fifo_v2_1_19.axi_data_fifo_v2_1_19_ndeep_srl(...
+Compiling module axi_data_fifo_v2_1_19.axi_data_fifo_v2_1_19_axic_reg_s...
+Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_wdata_route...
+Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_wdata_mux(C...
+Compiling module axi_data_fifo_v2_1_19.axi_data_fifo_v2_1_19_axic_srl_f...
+Compiling module axi_infrastructure_v1_1_0.axi_infrastructure_v1_1_0_axi2ve...
+Compiling module axi_infrastructure_v1_1_0.axi_infrastructure_v1_1_0_vector...
+Compiling module axi_register_slice_v2_1_20.axi_register_slice_v2_1_20_axic_...
+Compiling module axi_register_slice_v2_1_20.axi_register_slice_v2_1_20_axic_...
+Compiling module axi_register_slice_v2_1_20.axi_register_slice_v2_1_20_axic_...
+Compiling module axi_register_slice_v2_1_20.axi_register_slice_v2_1_20_axic_...
+Compiling module axi_register_slice_v2_1_20.axi_register_slice_v2_1_20_axi_r...
+Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_wdata_mux(C...
+Compiling module axi_data_fifo_v2_1_19.axi_data_fifo_v2_1_19_axic_srl_f...
+Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_addr_arbite...
+Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_decerr_slav...
+Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_crossbar(C_...
+Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_axi_crossba...
+Compiling module xil_defaultlib.axi_crossbar_1x2
+Compiling module blk_mem_gen_v8_4_4.beh_vlog_ff_clr_v8_4
+Compiling module blk_mem_gen_v8_4_4.beh_vlog_ff_pre_v8_4
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b010101...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b101111...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b101010...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b010101...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b010001...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b010001...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b011010...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b111111...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b011000...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b011111...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b0111)
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b111110...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b01000)
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b100010...
+Compiling module blk_mem_gen_v8_4_4.write_netlist_v8_4(C_AXI_TYPE=1)
+Compiling module blk_mem_gen_v8_4_4.blk_mem_axi_write_wrapper_beh_v8...
+Compiling module blk_mem_gen_v8_4_4.beh_vlog_ff_ce_clr_v8_4
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b01011)
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b0100)
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b111011...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b010001...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b010000...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b011111...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b01)
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b010000...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b010001...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b011101...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b111111...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b010101...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b111100...
+Compiling module blk_mem_gen_v8_4_4.beh_vlog_muxf7_v8_4
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b010101...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b011100...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b011111...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b010001...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b010001...
+Compiling module blk_mem_gen_v8_4_4.STATE_LOGIC_v8_4(INIT=64'b011100...
+Compiling module blk_mem_gen_v8_4_4.read_netlist_v8_4(C_ADDRB_WIDTH=...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_axi_read_wrapper_beh_v8_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.axi_ram
+Compiling module xil_defaultlib.axi_wrap_ram
+Compiling module xil_defaultlib.confreg(SIMULATION=1'b1)
+Compiling module xil_defaultlib.soc_axi_lite_top(SIMULATION=1'b1...
+Compiling module xil_defaultlib.tb_top
+WARNING: [XSIM 43-3373] "C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/testbench/mycpu_tb.v" Line 127. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
+run_program: Time (s): cpu = 00:00:03 ; elapsed = 00:00:26 . Memory (MB): peak = 797.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '27' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/run_vivado/mycpu_prj1/mycpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+# run 1000ns
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_top.soc_lite.u_axi_ram.ram.inst.axi_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+xsim: Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 886.359 ; gain = 87.668
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:29 ; elapsed = 00:00:47 . Memory (MB): peak = 886.359 ; gain = 95.109
+run all
+==============================================================
+Test begin!
+        [  22000 ns] Test is running, debug_wb_pc = 0x00000000
+        [  32000 ns] Test is running, debug_wb_pc = 0x00000000
+        [  42000 ns] Test is running, debug_wb_pc = 0x00000000
+        [  52000 ns] Test is running, debug_wb_pc = 0x00000000
+        [  62000 ns] Test is running, debug_wb_pc = 0x00000000
+        [  72000 ns] Test is running, debug_wb_pc = 0x00000000
+        [  82000 ns] Test is running, debug_wb_pc = 0x00000000
+        [  92000 ns] Test is running, debug_wb_pc = 0x00000000
+        [ 102000 ns] Test is running, debug_wb_pc = 0x00000000
+        [ 112000 ns] Test is running, debug_wb_pc = 0x00000000
+        [ 122000 ns] Test is running, debug_wb_pc = 0x00000000
+        [ 132000 ns] Test is running, debug_wb_pc = 0x00000000
+        [ 142000 ns] Test is running, debug_wb_pc = 0x00000000
+        [ 152000 ns] Test is running, debug_wb_pc = 0x00000000
+        [ 162000 ns] Test is running, debug_wb_pc = 0x00000000
+        [ 172000 ns] Test is running, debug_wb_pc = 0x00000000
+WARNING: [Simulator 45-29] Cannot open source file /wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/fifo_generator_v13_2/simulation/fifo_generator_vlog_beh.v: file does not exist.
+file mkdir C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/run_vivado/mycpu_prj1/mycpu.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/run_vivado/mycpu_prj1/mycpu.srcs/sim_1/new/simmycpu.v w ]
+add_files -fileset sim_1 C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/run_vivado/mycpu_prj1/mycpu.srcs/sim_1/new/simmycpu.v
+update_compile_order -fileset sim_1
+set_property top simmycpu [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/run_vivado/mycpu_prj1/mycpu.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/run_vivado/mycpu_prj1/mycpu.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/run_vivado/mycpu_prj1/mycpu.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/run_vivado/mycpu_prj1/mycpu.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/run_vivado/mycpu_prj1/mycpu.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "C:/Users/Fxil/Desktop/nscscc2021_group_qualifier_submission-rc1/release_project/func_test_v0.01/soc_axi_func/run_vivado/mycpu_prj1/mycpu.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Aug  2 22:34:58 2021...
