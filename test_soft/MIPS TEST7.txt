@@ -1,0 +1,9 @@
+addi $1,$0,1
+addi $2,$0,2
+add $3,$1,$2
+lui $4,1
+addi $4,$4,4
+addi $5,$0,5
+mult $4,$5
+mfhi $6
+mflo $7

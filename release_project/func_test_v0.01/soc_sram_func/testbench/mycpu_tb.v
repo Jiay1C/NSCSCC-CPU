@@ -159,6 +159,15 @@ begin
             #40;
             $finish;
         end
+        /*else begin
+        $display("--------------------------------------------------------------");
+            $display("[%t] Correct",$time);
+            $display("    reference: PC = 0x%8h, wb_rf_wnum = 0x%2h, wb_rf_wdata = 0x%8h",
+                      ref_wb_pc, ref_wb_rf_wnum, ref_wb_rf_wdata_v);
+            $display("    mycpu    : PC = 0x%8h, wb_rf_wnum = 0x%2h, wb_rf_wdata = 0x%8h",
+                      debug_wb_pc, debug_wb_rf_wnum, debug_wb_rf_wdata_v);
+            $display("--------------------------------------------------------------");
+        end*/
     end
 end
 

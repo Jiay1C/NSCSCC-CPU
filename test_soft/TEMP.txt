@@ -1,0 +1,2 @@
+MAIN: add $0,$0,$0
+jal MAIN

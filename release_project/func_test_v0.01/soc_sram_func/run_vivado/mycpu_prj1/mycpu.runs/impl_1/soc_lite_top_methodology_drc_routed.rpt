@@ -1,0 +1,98 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Aug  5 23:24:09 2021
+| Host         : DESKTOP-AVFRCEL running 64-bit major release  (build 9200)
+| Command      : report_methodology -file soc_lite_top_methodology_drc_routed.rpt -pb soc_lite_top_methodology_drc_routed.pb -rpx soc_lite_top_methodology_drc_routed.rpx
+| Design       : soc_lite_top
+| Device       : xc7a200tfbg676-2
+| Speed File   : -2
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 11
++-----------+------------------+--------------------------------------------------------+------------+
+| Rule      | Severity         | Description                                            | Violations |
++-----------+------------------+--------------------------------------------------------+------------+
+| TIMING-14 | Critical Warning | LUT on the clock tree                                  | 3          |
+| SYNTH-10  | Warning          | Wide multiplier                                        | 4          |
+| TIMING-20 | Warning          | Non-clocked latch                                      | 2          |
+| XDCC-1    | Warning          | Scoped Clock constraint overwritten with the same name | 1          |
+| XDCC-7    | Warning          | Scoped Clock constraint overwritten on the same source | 1          |
++-----------+------------------+--------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-14#1 Critical Warning
+LUT on the clock tree  
+The LUT cpu/ex/mdu/cpun_1_2824_BUFG_inst_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#2 Critical Warning
+LUT on the clock tree  
+The LUT cpu/ex/mdu/n_0_3440_BUFG_inst_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#3 Critical Warning
+LUT on the clock tree  
+The LUT cpu/ex/mdu/outPC[31]_i_10 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+SYNTH-10#1 Warning
+Wide multiplier  
+Detected multiplier at cpu/ex/mdu/p_1_out of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#2 Warning
+Wide multiplier  
+Detected multiplier at cpu/ex/mdu/p_1_out__0 of size 16x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#3 Warning
+Wide multiplier  
+Detected multiplier at cpu/ex/mdu/p_1_out__1 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#4 Warning
+Wide multiplier  
+Detected multiplier at cpu/ex/mdu/p_1_out__2 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch cpu/id/id2/ExcCode_reg[0] cannot be properly analyzed as its control pin cpu/id/id2/ExcCode_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch cpu/id/id2/ExcCode_reg[4] cannot be properly analyzed as its control pin cpu/id/id2/ExcCode_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+XDCC-1#1 Warning
+Scoped Clock constraint overwritten with the same name  
+A new clock constraint create_clock overrides a previous scoped clock constraint with the same name. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 10.000 -name clk -waveform {0.000 5.000} [get_ports clk] (Source: C:/Users/Microapple/Desktop/release_project/func_test_v0.01/soc_sram_func/run_vivado/soc_lite.xdc (Line: 5))
+Previous: create_clock -period 10.000 [get_ports clk] (Source: c:/Users/Microapple/Desktop/release_project/func_test_v0.01/soc_sram_func/rtl/xilinx_ip/clk_pll/clk_pll.xdc (Line: 56))
+Related violations: <none>
+
+XDCC-7#1 Warning
+Scoped Clock constraint overwritten on the same source  
+A new clock constraint create_clock overrides a previous scoped clock constraint defined on the same source. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 10.000 -name clk -waveform {0.000 5.000} [get_ports clk] (Source: C:/Users/Microapple/Desktop/release_project/func_test_v0.01/soc_sram_func/run_vivado/soc_lite.xdc (Line: 5))
+Previous: create_clock -period 10.000 [get_ports clk] (Source: c:/Users/Microapple/Desktop/release_project/func_test_v0.01/soc_sram_func/rtl/xilinx_ip/clk_pll/clk_pll.xdc (Line: 56))
+Related violations: <none>
+
+

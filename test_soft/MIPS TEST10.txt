@@ -1,0 +1,27 @@
+
+addi $1,$1,1
+addi $1,$1,1
+addi $1,$1,1
+addi $1,$1,1
+addi $1,$1,1
+addi $1,$1,1
+eret
+addi $1,$1,1
+addi $1,$1,1
+addi $1,$1,1
+addi $1,$1,1
+addi $1,$1,1
+syscall
+addi $1,$1,1
+addi $1,$1,1
+addi $1,$1,1
+addi $1,$1,1
+addi $1,$1,1
+addi $1,$1,1
+eret
+addi $1,$1,1
+addi $1,$1,1
+addi $1,$1,1
+addi $1,$1,1
+addi $1,$1,1
+addi $3,$2,1
